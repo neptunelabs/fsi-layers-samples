@@ -1,0 +1,8 @@
+title: Trains
+image: logo.png
+description: Multiple images are rendered and moved as parallax.
+facts:
+  - Object movement
+  - Object rotation
+  - Reference Sizing
+priority: 2

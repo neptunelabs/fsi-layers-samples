@@ -1,0 +1,8 @@
+title: Flowers
+image: logo.png
+description: Simple HTML based Demo with many layers
+facts:
+  - Layer groups
+  - Object movement
+  - Object rotation
+priority: 1

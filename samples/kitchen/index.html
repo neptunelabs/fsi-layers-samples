@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'/>
+  <title>Kitchen Configurator - FSI Layers Demo</title>
+  <meta name="author" content="NeptuneLabs">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=10.0">
+  <link href='index.css' rel='stylesheet'/>
+  <link href='../icons/bootstrap-icons.css' rel='stylesheet'/>
+  <script src='/js/bootstrap.bundle.js'></script>
+  <script src='@@FSI_SERVER/@@FSI_CONTEXT/@@FSI_VIEWER/applications/layers/js/fsilayers.js'></script>
+  <script src='kitchen.js'></script>
+  <script>
+    let kitchen
+
+    function initKitchen() {
+      kitchen = new Kitchen()
+    }
+
+    function loadChange(state) {
+      const spnEl = document.getElementById('loadingSpinner')
+      if (state) {
+        spnEl.classList.remove('invisible')
+      } else {
+        spnEl.classList.add('invisible')
+      }
+    }
+
+    function cfgChange(el) {
+      kitchen.cfgChange(el)
+    }
+  </script>
+</head>
+<body>
+<div class='position-relative w-100'>
+  <div class='position-absolute spinner-border text-light shadow invisible' id='loadingSpinner'
+       style='width: 5rem; height: 5rem;' role='status'></div>
+  <div class='position-absolute top-50 start-50 translate-middle m-4'>
+    <button class='btn btn-primary bg-gradient invisible' id='btnConfigurator' type='button' data-bs-toggle='offcanvas'
+            data-bs-target='#offcanvasRight' aria-controls='offcanvasRight'>Open Configurator
+    </button>
+  </div>
+</div>
+<div class='container-fluid fill overflow-hidden'>
+
+  <div class='row h-100'>
+    <div class='col h-100'>
+
+      <fsi-layers id="kitchen" useDevicePixelRatio="true" onReady="initKitchen" onLoadChange='loadChange' width="100%"
+                  height="100%">
+        <fsi-layer-group name="configurator" left="0" bottom="centered" width="100%" height="100%" refWidth="3840"
+                         refHeight="2400" refMode="fill">
+          <fsi-layer name="kitchen" src="@@IMAGES_ROOT/kitchen/Kitchen.tif" left="0" top="0" width="100%"
+                     height="100%"></fsi-layer>
+          <fsi-layer name="hanging-lamp" left="986 rpx" top="0 rpx" width="165 rpx" height="787 rpx"
+                     src="@@IMAGES_ROOT/kitchen/Hanging-Lamp.tif" hidden="true"></fsi-layer>
+          <fsi-layer name="design-lamp" left="2646 rpx" top="0 rpx" width="753 rpx" height="993 rpx"
+                     src="@@IMAGES_ROOT/kitchen/Design-Lamp.tif" hidden="true"></fsi-layer>
+          <fsi-layer name="knifes" left="1468 rpx" top="813 rpx" width="377 rpx" height="285 rpx"
+                     src="@@IMAGES_ROOT/kitchen/Knifes.png" hidden="true"></fsi-layer>
+          <fsi-layer name="plant" left="0" bottom="0" width="1441 rpx" height="1166 rpx"
+                     src="@@IMAGES_ROOT/kitchen/Plant.png" hidden="true"></fsi-layer>
+          <fsi-layer name="seating-group" left="1704 rpx" top="1291 rpx" width="1975 rpx" height="1109 rpx"
+                     src="@@IMAGES_ROOT/kitchen/Seating-Group.tif" hidden="true"></fsi-layer>
+        </fsi-layer-group>
+      </fsi-layers>
+
+    </div>
+
+    <div class='offcanvas offcanvas-end show semi-trans' data-bs-backdrop='false' tabindex='-1' id='offcanvasRight'
+         aria-labelledby='offcanvasRightLabel'>
+      <div class='offcanvas-header'>
+        <h5 id='offcanvasRightLabel'>Configuration</h5>
+        <button type='button' class='btn-close text-reset' data-bs-dismiss='offcanvas' aria-label='Close'></button>
+      </div>
+      <div class='offcanvas-body'>
+        <div class='form-check'>
+          <input class='form-check-input' type='checkbox' value='' id='checkChildProof' checked
+                 onchange='cfgChange(this)'>
+          <label class='form-check-label' for='checkChildProof'>
+            Childproof
+          </label>
+        </div>
+        <hr/>
+        <div class='form-check'>
+          <input class='form-check-input' type='checkbox' value='' id='checkO2Gen' onchange='cfgChange(this)'>
+          <label class='form-check-label' for='checkO2Gen'>
+            O<sub>2</sub> Generator
+          </label>
+        </div>
+        <hr/>
+        <div class='form-check'>
+          <input class='form-check-input' type='checkbox' value='' id='checkSun1' onchange='cfgChange(this)'>
+          <label class='form-check-label' for='checkSun1'>
+            Sun Emulator
+          </label>
+          <input type='range' class='form-range' id='rangeSun1' min='-150' value='0' max='150' disabled
+                 oninput='cfgChange(this)'>
+        </div>
+        <hr/>
+        <div class='form-check'>
+          <input class='form-check-input' type='checkbox' value='' id='checkSun2' onchange='cfgChange(this)'>
+          <label class='form-check-label' for='checkSun2'>
+            Sun Emulator<p class="m-0"><sub>(Limited Design Edition)</sub></p>
+          </label>
+          <input type='range' class='form-range' id='rangeSun2' min='-250' value='0' max='20' disabled
+                 oninput='cfgChange(this)'>
+        </div>
+        <hr/>
+        <div class='form-check'>
+          <input class='form-check-input' type='checkbox' value='' id='checkChillOut' onchange='cfgChange(this)'>
+          <label class='form-check-label' for='checkChillOut'>
+            Chill-out area
+          </label>
+          <div>
+            <div class='custom-radios'>
+              <div>
+                <input type='radio' id='checkChillColor1' name='color' value='color-1' checked disabled
+                       onchange='cfgChange(this)'>
+                <label for='checkChillColor1'>
+                  <span>
+                    <i class='bi bi-check-lg'></i>
+                  </span>
+                </label>
+              </div>
+
+              <div>
+                <input type='radio' id='checkChillColor2' name='color' value='color-2' disabled
+                       onchange='cfgChange(this)'>
+                <label for='checkChillColor2'>
+                  <span>
+                    <i class='bi bi-check-lg text-white'></i>
+                  </span>
+                </label>
+              </div>
+
+              <div>
+                <input type='radio' id='checkChillColor3' name='color' value='color-3' disabled
+                       onchange='cfgChange(this)'>
+                <label for='checkChillColor3'>
+                  <span>
+                    <i class='bi bi-check-lg text-white'></i>
+                  </span>
+                </label>
+              </div>
+
+              <div>
+                <input type='radio' id='checkChillColor4' name='color' value='color-4' disabled
+                       onchange='cfgChange(this)'>
+                <label for='checkChillColor4'>
+                  <span>
+                    <i class='bi bi-check-lg text-white'></i>
+                  </span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr/>
+        <div class='form-check'>
+          <div>
+            <label for='toasterColorHue' class='form-label'>Toaster Hue Value</label>
+            <input type='range' class='form-range' id='toasterColorHue' min='0' value='0' max='360'
+                   onchange='cfgChange(this)'>
+            <label for='toasterColorSat' class='form-label'>Toaster Color Saturation</label>
+            <input type='range' class='form-range' id='toasterColorSat' min='0' value='85' max='100'
+                   onchange='cfgChange(this)'>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

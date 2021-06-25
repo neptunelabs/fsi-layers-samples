@@ -1,0 +1,84 @@
+$offcanvas-horizontal-width: 300px;
+$offcanvas-bg-color: #f0f0f8;
+
+/* Import bootstrap from fsi-samples-framework */
+@import "bootstrap";
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.fill {
+  min-height: 100%;
+  height: 100%;
+  padding: 0;
+}
+
+.semi-trans {
+  opacity: 0.8;
+}
+
+// Colors
+$color-1: #eee;
+$color-2: #84b8db;
+$color-3: #84db9a;
+$color-4: #dbd884;
+
+.custom-radios {
+
+  div {
+    display: inline-block;
+  }
+
+  input[type="radio"] {
+    display: none;
+
+    + label {
+      font-family: sans-serif;
+      font-size: 17px;
+
+      span {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        margin: -1px 4px 0 0;
+        vertical-align: middle;
+        cursor: pointer;
+        border-radius: 50%;
+        border: 2px solid #FFFFFF;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
+        background-repeat: no-repeat;
+        background-position: center;
+        text-align: center;
+        line-height: 44px;
+
+        i {
+          opacity: 0;
+          transition: all .3s ease;
+        }
+      }
+    }
+
+    &#checkChillColor1 + label span {
+      color: #666;
+      background-color: $color-1;
+    }
+
+    &#checkChillColor2 + label span {
+      background-color: $color-2;
+    }
+
+    &#checkChillColor3 + label span {
+      background-color: $color-3;
+    }
+
+    &#checkChillColor4 + label span {
+      background-color: $color-4;
+    }
+
+    &:checked + label span i {
+      opacity: 1;
+    }
+  }
+}

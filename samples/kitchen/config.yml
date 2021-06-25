@@ -1,0 +1,8 @@
+title: Kitchen Configurator
+image: logo.png
+description: Simple Room Configurator with 6 Layers.
+facts:
+  - Object movement
+  - Object colorization
+  - Object visibility
+priority: 3

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>FSI Layers Demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <link rel="stylesheet" href="index.css" type="text/css"/>
+  <script src="index.js"></script>
+  <script src="https://fsi-site.neptunelabs.com/fsi/viewer/applications/layers/js/fsilayers.js"></script>
+</head>
+<body>
+<div class="flex-container">
+  <fsi-layers id="myFSILayers" useDevicePixelRatio="true" debug="1" onReady="ready">
+    <fsi-layer-group name="background" width="80%" height="80%">
+      <fsi-layer-group name="all" width="600" height="600">
+        <fsi-layer
+          name="rect"
+          width="60%"
+          height="60%"
+          opacity="0.5"
+          hidden="0"
+          src="@@IMAGES_ROOT/starter/rect.png"
+        >
+        </fsi-layer>
+        <fsi-layer
+          name="circle"
+          width="20%"
+          height="20%"
+          top="10%"
+          left="10%"
+          opacity="0.5"
+          hidden="0"
+          src="@@IMAGES_ROOT/starter/circle.png"
+        >
+        </fsi-layer>
+      </fsi-layer-group>
+    </fsi-layer-group>
+  </fsi-layers>
+</div>
+</body>
+</html>
