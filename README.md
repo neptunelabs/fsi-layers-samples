@@ -1,7 +1,9 @@
-# FSI Layers - Samples
-
+# [FSI Layers](https://www.neptunelabs.com) &middot; Samples
 | ***Pixel-perfect*** | ***High-DPI-ready*** | ***Fast :rocket:*** | ***Hackable*** | ***Consistent*** |
 |:-----------------:|:-------------:|:---------------:|:---------------:|:---------------:|
+
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/neptunelabs/fsi-layers-samples/blob/main/LICENSE)
+
 
 FSI Layers renders any number of images as layers in a canvas.
 The real-time scaling capabilities of the image server are used to achieve pixel-perfect results.
