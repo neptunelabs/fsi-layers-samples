@@ -47,7 +47,7 @@ class PDP {
     this.fsiLayersEl = new $FSI.Layers()
     this.fsiLayersEl.init(containerEl, {
       name: 'articleLayer',
-      debug: true,
+      debug: false,
       useDevicePixelRatio: true,
       onReady: () => {
         this.initProduct()
