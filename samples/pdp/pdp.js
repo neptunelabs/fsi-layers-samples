@@ -111,9 +111,6 @@ class PDP {
       const headerText = document.createTextNode(this.productData.products[groupName]['_'].name)
       selAccordionButtonEl.appendChild(headerText)
       selAccordionButtonEl.addEventListener('click', (evt) => {
-        console.dir(evt.target.classList)
-        if (evt.target.classList.contains('collapsed')) {
-        }
         this.handleLayerSelector(groupName, !evt.target.classList.contains('collapsed'))
       })
 
@@ -127,10 +124,16 @@ class PDP {
       }
       selAccordionCollapseEl.setAttribute('id', 'collapse_' + groupName)
       selAccordionCollapseEl.setAttribute('aria-labelledby', 'heading_' + groupName)
-      //selAccordionCollapseEl.setAttribute('data-bs-parent', '#layerAccordion')
 
       const selAccordionBodyEl = document.createElement('div')
       selAccordionBodyEl.classList.add('accordion-body')
+
+      const formSelectorTextEl = document.createElement('div')
+      formSelectorTextEl.setAttribute('id', this.getCheckName(groupName))
+      const selectorTextEl = document.createTextNode(this.productData.products[groupName]['_'].name)
+      formSelectorTextEl.appendChild(selectorTextEl)
+
+      selAccordionBodyEl.appendChild(formSelectorTextEl)
 
       const formSelector = this.buildLayerSelector(groupName, this.productData.products[groupName])
       selAccordionBodyEl.appendChild(formSelector)
