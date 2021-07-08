@@ -10,4 +10,5 @@ yarn.lock
 node_modules
 bower_components
 dist
+jsfiddle
 .cache

@@ -6,8 +6,29 @@ html {
   font-family: sans-serif;
 }
 
+.container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
 fsi-layers {
   width: 100%;
   height: 100%;
   flex: 1 1 auto;
+}
+
+.credits {
+  font-size: 8pt;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: white;
+  opacity: 0.5;
+  border: solid 1px gray;
+  border-radius: 2em;
+  padding: 1pt;
 }

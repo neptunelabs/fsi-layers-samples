@@ -7,7 +7,6 @@ body, html {
   height: 100%;
   margin: auto;
   font-family: sans-serif;
-
 }
 
 fsi-layers {
@@ -29,16 +28,13 @@ div.flex-container {
 }
 
 .row {
-  display: -ms-flexbox; /* IE10 */
   display: flex;
-  -ms-flex-wrap: wrap; /* IE10 */
   flex-wrap: wrap;
   padding: 0 4px;
 }
 
 /* Create four equal columns that sits next to each other */
 .column {
-  -ms-flex: 25%; /* IE10 */
   flex: 25%;
   max-width: 25%;
   padding: 0 4px;

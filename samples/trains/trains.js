@@ -1,20 +1,21 @@
+function runTrains() {
+  new TrainsRunning()
+}
+
 class TrainsRunning {
-  rafCallID
-  fsiLayersEl
-
-  rMill = 1
-
-  xTrain = 0
-  xCloudFront = 0
-  xCloudBack = 0
-  xWater = 0
-
-  dirTrain = 0.2
-  dirCloudFront = 0.01
-  dirCloudBack = 0.003
-  dirWater = 0.005
-
   constructor() {
+    this.rMill = 1
+
+    this.xTrain = 0
+    this.xCloudFront = 0
+    this.xCloudBack = 0
+    this.xWater = 0
+
+    this.dirTrain = 0.2
+    this.dirCloudFront = 0.01
+    this.dirCloudBack = 0.003
+    this.dirWater = 0.005
+
     this.fsiLayersEl = document.getElementById('trainsFSILayer')
     this.moveLayers()
   }
