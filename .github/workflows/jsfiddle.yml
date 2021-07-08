@@ -15,9 +15,10 @@ jobs:
       with:
         node-version: '16.x'
         registry-url: 'https://registry.npmjs.org'
-    - run: npm install
     - name: Build JSFiddle Demos
-      run: build-jsfiddle
+      run: |
+        npm install
+        build-jsfiddle
       env:
         DEMO_FSI_SERVER: ${{ secrets.DEMO_FSI_SERVER }}
     - name: Commit files
