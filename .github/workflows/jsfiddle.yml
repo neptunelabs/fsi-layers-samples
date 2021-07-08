@@ -22,16 +22,15 @@ jobs:
         node ./node_modules/@neptunelabs/fsi-samples-framework/jsfiddle-builder.js
       env:
         DEMO_FSI_SERVER: ${{ secrets.DEMO_FSI_SERVER }}
-    - name: Commit files
-      run: |
-        cd jsfiddle
-        git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-        git config --local user.name "github-actions[bot]"
-        git commit -m "Add changes" -a
-    - name: Push changes
-      uses: ad-m/github-push-action@master
+    - name: Pushes JSFiddle files
+      uses: dmnemec/copy_file_to_another_repo_action@main
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.JSFIDDLE_GITHUB_TOKEN }}
       with:
-        directory: jsfiddle
-        github_token: ${{ secrets.JSFIDDLE_GITHUB_TOKEN }}
-        repository: ${{ secrets.JSFIDDLE_GITHUB_REPOSITORY }}
-        branch: master
+        source_file: 'jsfiddle'
+        destination_repo: ${{ secrets.JSFIDDLE_GITHUB_REPOSITORY }}
+        destination_folder: 'test-dir'
+        user_email: 'webmaster@neptunelabs.com'
+        user_name: 'neptunelabs'
+        commit_message: 'JSFiddle commit'
+        destination_branch: 'master'
