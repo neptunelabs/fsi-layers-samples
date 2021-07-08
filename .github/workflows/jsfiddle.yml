@@ -28,6 +28,7 @@ jobs:
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
+        directory: jsfiddle
         github_token: ${{ secrets.JSFIDDLE_GITHUB_TOKEN }}
         repository: ${{ secrets.JSFIDDLE_GITHUB_REPOSITORY }}
         branch: master
