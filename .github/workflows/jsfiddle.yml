@@ -22,6 +22,7 @@ jobs:
         node ./node_modules/@neptunelabs/fsi-samples-framework/jsfiddle-builder.js
       env:
         DEMO_FSI_SERVER: ${{ secrets.DEMO_FSI_SERVER }}
+        JSFIDDLE_SRCDIR: ${{ secrets.JSFIDDLE_SRCDIR }}
     - name: Pushes JSFiddle files
       uses: dmnemec/copy_file_to_another_repo_action@main
       env:
