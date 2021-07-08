@@ -18,7 +18,8 @@ jobs:
     - name: Build JSFiddle Demos
       run: |
         npm install
-        build-jsfiddle
+        cat package-lock.json
+        node ./node_modules/@neptunelabs/fsi-samples-framework/jsfiddle-builder.js
       env:
         DEMO_FSI_SERVER: ${{ secrets.DEMO_FSI_SERVER }}
     - name: Commit files
