@@ -27,9 +27,9 @@ jobs:
       env:
         API_TOKEN_GITHUB: ${{ secrets.JSFIDDLE_GITHUB_TOKEN }}
       with:
-        source_file: 'jsfiddle'
+        source_file: 'jsfiddle/*'
         destination_repo: ${{ secrets.JSFIDDLE_GITHUB_REPOSITORY }}
-        destination_folder: 'test-dir'
+        destination_folder: 'fsi-layers/'
         user_email: 'webmaster@neptunelabs.com'
         user_name: 'neptunelabs'
         commit_message: 'JSFiddle commit'
