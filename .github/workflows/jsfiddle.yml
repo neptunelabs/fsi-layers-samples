@@ -29,7 +29,7 @@ jobs:
       env:
         API_TOKEN_GITHUB: ${{ secrets.JSFIDDLE_GITHUB_TOKEN }}
       with:
-        source_file: ${{ env.JSFIDDLE_SRCDIR }}
+        source_file: ${{ github.event.repository.name }}
         destination_repo: ${{ secrets.JSFIDDLE_GITHUB_REPOSITORY }}
         user_email: 'webmaster@neptunelabs.com'
         user_name: 'neptunelabs'
