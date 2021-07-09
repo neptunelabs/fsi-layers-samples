@@ -20,7 +20,6 @@ jobs:
         npm install
         node ./node_modules/@neptunelabs/fsi-samples-framework/jsfiddle-builder.js
         echo ${{ env.JSFIDDLE_SRCDIR }}
-        echo ${env.JSFIDDLE_SRCDIR}
         echo ${JSFIDDLE_SRCDIR}
         echo Test1
     - name: Pushes JSFiddle files
