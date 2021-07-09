@@ -3,7 +3,7 @@ name: Node.js CI
 on: [push]
 
 env:
-  GIT_PR_SHA: ${{github.event.pull_request.head.sha}}
+  JSFIDDLE_REPO: neptunelabs/fsi-layers-jsfiddle-samples
 
 jobs:
 
@@ -22,15 +22,13 @@ jobs:
       run: |
         npm install
         node ./node_modules/@neptunelabs/fsi-samples-framework/jsfiddle-builder.js
-        echo ${{ github.event.repository.name }}
-        echo Test1
     - name: Pushes JSFiddle files
       uses: dmnemec/copy_file_to_another_repo_action@main
       env:
         API_TOKEN_GITHUB: ${{ secrets.JSFIDDLE_GITHUB_TOKEN }}
       with:
         source_file: ${{ github.event.repository.name }}
-        destination_repo: ${{ secrets.JSFIDDLE_GITHUB_REPOSITORY }}
+        destination_repo: ${{ env.JSFIDDLE_REPO }}
         user_email: 'webmaster@neptunelabs.com'
         user_name: 'neptunelabs'
         commit_message: 'JSFiddle commit'
