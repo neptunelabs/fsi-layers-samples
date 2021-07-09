@@ -2,6 +2,9 @@ name: Node.js CI
 
 on: [push]
 
+env:
+  GIT_PR_SHA: ${{github.event.pull_request.head.sha}}
+
 jobs:
 
   publish-jsfiddle:
@@ -19,8 +22,7 @@ jobs:
       run: |
         npm install
         node ./node_modules/@neptunelabs/fsi-samples-framework/jsfiddle-builder.js
-        echo ${{ env.JSFIDDLE_SRCDIR }}
-        echo ${JSFIDDLE_SRCDIR}
+        echo ${{ github.event.repository.name }}
         echo Test1
     - name: Pushes JSFiddle files
       uses: dmnemec/copy_file_to_another_repo_action@main
