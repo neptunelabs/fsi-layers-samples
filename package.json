@@ -16,7 +16,7 @@
     "npm": ">=6.0.0"
   },
   "devDependencies": {
-    "@neptunelabs/fsi-samples-framework": "^0.2.7-dev",
+    "@neptunelabs/fsi-samples-framework": "^0.2.9-dev",
     "prettier": "^2.3.2"
   },
   "scripts": {

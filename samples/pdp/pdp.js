@@ -1,4 +1,4 @@
-const productDataFile = 'bread-data.json'
+const productDataFile = '@@JSFIDDLE_LOAD_REPOBASE/pdp/bread-data.json'
 
 class PDP {
   // Templates @@ defined in project/env.yml and replaced by grunt

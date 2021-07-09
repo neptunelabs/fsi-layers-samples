@@ -6,3 +6,18 @@ facts:
   - Object visibility
   - 575 combinations
 priority: 4
+jsfiddle:
+  mapping:
+    html: "index.html"
+    js: "pdp.js"
+    css: "pdp.css"
+  resources:
+    - https://cdn.jsdelivr.net/npm/bootstrap@$BOOTSTRAP_VERSION$/dist/css/bootstrap.min.css
+    - https://cdn.jsdelivr.net/npm/bootstrap@$BOOTSTRAP_VERSION$/dist/js/bootstrap.bundle.min.js
+    - https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css
+    - $FSI_SERVER$/$FSI_CONTEXT$/viewer/applications/layers/js/fsilayers.js
+  tags:
+    - FSI
+    - FSI Server
+    - FSI Layers
+    - NeptuneLabs

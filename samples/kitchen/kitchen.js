@@ -1,9 +1,25 @@
+let kitchen
+
+function initKitchen() {
+  kitchen = new Kitchen()
+}
+
+function loadChange(state) {
+  const spnEl = document.getElementById('loadingSpinner')
+  if (state) {
+    spnEl.classList.remove('invisible')
+  } else {
+    spnEl.classList.add('invisible')
+  }
+}
+
+function cfgChange(el) {
+  kitchen.cfgChange(el)
+}
+
 class Kitchen {
-  fsiLayersEl
-
-  toasterHSL = [358, 85, 20]
-
   constructor() {
+    this.toasterHSL = [358, 85, 20]
     this.fsiLayersEl = document.getElementById('kitchen')
     const offCanvasEl = document.getElementById('offcanvasRight')
     offCanvasEl.addEventListener('hidden.bs.offcanvas', function () {
