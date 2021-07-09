@@ -1,9 +1,10 @@
-class Animation {
-  rafCallID
-  fsiLayersEl
-  degree = 0
+function runAnimation() {
+  new Animation()
+}
 
+class Animation {
   constructor() {
+    this.degree = 0
     this.fsiLayersEl = document.getElementById('flowerGarden')
     this.moveLayers()
   }
@@ -29,6 +30,7 @@ class Animation {
       ],
       { rotate: this.degree++ / 24 }
     )
+
     this.fsiLayersEl.setProperties(
       [
         'blue-1-3',
@@ -49,6 +51,7 @@ class Animation {
       ],
       { rotate: -this.degree++ / 8 }
     )
+
     this.fsiLayersEl.setProperties(
       [
         'blue-1-2',
@@ -69,7 +72,9 @@ class Animation {
       ],
       { rotate: this.degree++ / 12 }
     )
+
     this.fsiLayersEl.render()
+
     this.rafCallID = requestAnimationFrame(() => this.moveLayers())
   }
 }

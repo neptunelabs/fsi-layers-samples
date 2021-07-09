@@ -12,7 +12,7 @@ jsfiddle:
     js: "trains.js"
     css: "trains.css"
   resources:
-    - $DEMO_FSI_SERVER$/viewer/applications/layers/js/fsilayers.js
+    - $FSI_SERVER$/$FSI_CONTEXT$/viewer/applications/layers/js/fsilayers.js
   tags:
     - FSI
     - FSI Server

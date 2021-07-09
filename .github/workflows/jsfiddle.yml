@@ -20,15 +20,12 @@ jobs:
         npm install
         cat package-lock.json
         node ./node_modules/@neptunelabs/fsi-samples-framework/jsfiddle-builder.js
-      env:
-        DEMO_FSI_SERVER: ${{ secrets.DEMO_FSI_SERVER }}
-        JSFIDDLE_SRCDIR: ${{ secrets.JSFIDDLE_SRCDIR }}
     - name: Pushes JSFiddle files
       uses: dmnemec/copy_file_to_another_repo_action@main
       env:
         API_TOKEN_GITHUB: ${{ secrets.JSFIDDLE_GITHUB_TOKEN }}
       with:
-        source_file: ${{ secrets.JSFIDDLE_SRCDIR }}
+        source_file: ${{ env.JSFIDDLE_SRCDIR }}
         destination_repo: ${{ secrets.JSFIDDLE_GITHUB_REPOSITORY }}
         user_email: 'webmaster@neptunelabs.com'
         user_name: 'neptunelabs'

@@ -1,6 +1,7 @@
 ---
 title: 'FSI Layers Sample'
 projectURL: https://www.neptunelabs.com/fsi-layers/
+jsFiddleBase: fsi-layers
 # Please change the following the variables ONLY in env.yml
 # To do this, first copy the file env.yml.dist to env.yml
 env:
