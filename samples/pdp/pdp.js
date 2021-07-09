@@ -20,6 +20,7 @@ class PDP {
     reqHeader.append('Content-Type', 'text/json')
     let initObject = {
       method: 'GET',
+      mode: 'no-cors',
       headers: reqHeader,
     }
 
