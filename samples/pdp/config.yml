@@ -11,6 +11,8 @@ jsfiddle:
     html: "index.html"
     js: "pdp.js"
     css: "pdp.css"
+    json:
+      productDataFile: bread-data.json
   resources:
     - https://cdn.jsdelivr.net/npm/bootstrap@$BOOTSTRAP_VERSION$/dist/css/bootstrap.min.css
     - https://cdn.jsdelivr.net/npm/bootstrap@$BOOTSTRAP_VERSION$/dist/js/bootstrap.bundle.min.js

@@ -1,4 +1,4 @@
-const productDataFile = '@@JSFIDDLE_LOAD_REPOBASE/pdp/bread-data.json'
+const productDataFile = 'bread-data.json'
 
 class PDP {
   constructor(dataFile) {
@@ -8,8 +8,11 @@ class PDP {
     this.selection = {}
 
     // Templates @@ defined in project/env.yml and replaced by grunt
-    this.fsiServer = '@@FSI_SERVER/@@FSI_CONTEXT/server'
+    this.fsiServer = '@@FSI_SERVER/@@FSI_CONTEXT'
     this.srcRoot = '@@IMAGES_ROOT/product-detail'
+    this.assetRoot = '@@STATIC_ROOT/product-detail'
+
+    this.dataFile = this.fsiServer + '/static/' + this.assetRoot + '/' + dataFile
   }
 
   /*
@@ -20,7 +23,6 @@ class PDP {
     reqHeader.append('Content-Type', 'text/json')
     let initObject = {
       method: 'GET',
-      mode: 'no-cors',
       headers: reqHeader,
     }
 
@@ -206,7 +208,7 @@ class PDP {
 
         const labelImgEl = document.createElement('img')
         labelImgEl.setAttribute('height', '80')
-        labelImgEl.src = this.fsiServer + '?type=image&source=' + this.srcRoot + '/' + data.img + '&height=160'
+        labelImgEl.src = this.fsiServer + '/server?type=image&source=' + this.srcRoot + '/' + data.img + '&height=160'
 
         labelEl.appendChild(labelImgEl)
         selectorEl.appendChild(labelEl)

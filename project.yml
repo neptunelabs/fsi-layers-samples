@@ -8,4 +8,4 @@ env:
   FSI_CONTEXT: fsi
   FSI_VIEWER: viewer
   IMAGES_ROOT: images/samples/layers
-  STATIC_ROOT: static/samples/layers
+  STATIC_ROOT: assets/samples/layers
