@@ -14,6 +14,24 @@ This repository contains examples on how to use and build your own applications.
 
 ![Project Image](project.gif)
 
+## Getting Started
+
+Without starting this project in your IDE, you can discover, develop and customize
+all demos in JSFiddle.
+
+[Flowers in JSFiddle][flowjsf]
+
+[Trains in JSFiddle][trainsjsf]
+
+[Kitchen in JSFiddle][kitchenjsf]
+
+[Product Detail Page in JSFiddle][pdpjsf]
+
+[flowjsf]: https://jsfiddle.net/gh/get/library/pure/neptunelabs/fsi-jsfiddle-samples/tree/master/fsi-layers-samples/flowers
+[kitchenjsf]: https://jsfiddle.net/gh/get/library/pure/neptunelabs/fsi-jsfiddle-samples/tree/master/fsi-layers-samples/kitchen
+[pdpjsf]: https://jsfiddle.net/gh/get/library/pure/neptunelabs/fsi-jsfiddle-samples/tree/master/fsi-layers-samples/pdp
+[trainsjsf]: https://jsfiddle.net/gh/get/library/pure/neptunelabs/fsi-jsfiddle-samples/tree/master/fsi-layers-samples/trains
+
 ## Start and develop
 
 To run and modify this samples:
