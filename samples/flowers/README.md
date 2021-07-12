@@ -7,7 +7,7 @@ The aim of the demo is to show how single layers of a group can be addressed and
 
 First, an overall layer with a reference width & height is set:
 ```xml
- <fsi-layer-group name="container" right="centered" bottom="centered" width="100%" height="100%" refMode="fill" refWidth="1920" refHeight="880">
+<fsi-layer-group name="container" right="centered" bottom="centered" width="100%" height="100%" refMode="fill" refWidth="1920" refHeight="880">
 </fsi-layer-group>
 ```
 
@@ -54,16 +54,7 @@ Afterwards, *render* renders the current state of FSI Layers. It's important to 
 ```javascript
 class Animation {
 
-  rafCallID;
-  layers;
-
-  degree = 0;
-
-  id = null;
-  constructor() {
-    this.layers = document.getElementsByTagName("fsi-layers")[0];
-    this.moveLayers();
-  }
+ ...
 
   moveLayers() {
     this.layers.setProperties(["blue-1-4","orange-1-4"], {rotate: this.degree++/24});
@@ -75,15 +66,12 @@ class Animation {
 }
 ```
 
-The animation function is called in the main source code:
+The animation function is called in onReady from a callback defined in fsi-layer tag:
 
-```html
-<script>
-  function runAnimation(){
-    new Animation();
-  }
-</script>
-</script>
+```javascript
+function runAnimation(){
+  new Animation();
+}
 ```
 
 ## Testing with examples from  your own server

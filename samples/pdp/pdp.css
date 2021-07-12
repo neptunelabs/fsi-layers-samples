@@ -1,0 +1,41 @@
+body {
+  overflow-x: hidden;
+  width: 100vw;
+  margin-right: calc(100vw - 100%);
+  background-color: #eeeeee;
+  color: slategrey;
+  font-size: 0.9rem;
+}
+
+.accordion-button-fixed:after{
+  background-image: none !important;
+}
+
+.yellow-bg {
+  background-color: #ffa41c;
+}
+
+.yellow-txt {
+  color: #ffa41c;
+}
+
+.accordion-button:not(.collapsed){
+  background-color: #007185 !important;
+  color: white;
+}
+
+.accordion-button.collapsed{
+  color: slategrey;
+}
+
+.btn-pdp-layer{
+  border-color: #007185;
+}
+
+.btn-check:active+.btn-pdp-layer, .btn-check:checked+.btn-pdp-layer, .btn-pdp-layer.active, .btn-pdp-layer.dropdown-toggle.show, .btn-pdp-layer:active {
+  background-color: #b9cfd5;
+}
+
+.btn-pdp-layer:hover {
+  background-color: #007185;
+}

@@ -8,12 +8,9 @@ The animation is dealt with in the trains.js:
 This is initialized by *FSI-Layers* with the callback ``onReady``.
 
 ```javascript
-<script src="trains.js"></script>
-<script>
-  function runTrains() {
-    new TrainsRunning();
-  }
-</script>
+function runTrains() {
+  new TrainsRunning();
+}
 ```
 ```xml
 <fsi-layers

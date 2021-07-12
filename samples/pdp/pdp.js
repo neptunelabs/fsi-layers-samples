@@ -100,7 +100,7 @@ class PDP {
       selAccordionHeaderEl.classList.add('accordion-header')
       selAccordionHeaderEl.id = 'heading_' + groupName
       const selAccordionButtonEl = document.createElement('button')
-      selAccordionButtonEl.classList.add('accordion-button')
+      selAccordionButtonEl.classList.add('accordion-button', 'h5', 'py-2')
       if (!isFirstElement) {
         selAccordionButtonEl.classList.add('collapsed')
       } else {
@@ -199,7 +199,7 @@ class PDP {
         selectorEl.appendChild(inputEl)
 
         const labelEl = document.createElement('label')
-        labelEl.classList.add('btn', 'btn-outline-warning', 'm-1')
+        labelEl.classList.add('btn', 'btn-pdp-layer', 'm-1')
         labelEl.setAttribute('for', inputEl.id)
 
         const tooltip = new bootstrap.Tooltip(labelEl, {
@@ -287,7 +287,6 @@ class PDP {
     // hide Layer-Selector
     else {
       this.setSelection(id, null, false)
-      this.fill(this.getCheckName(id), '')
     }
 
     // hide/show fsi-layer group

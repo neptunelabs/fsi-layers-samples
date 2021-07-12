@@ -3,11 +3,11 @@
     "name": "NeptuneLabs GmbH",
     "url": "https://www.neptunelabs.com/"
   },
-  "version": "21.06.24",
+  "version": "21.07.12",
   "homepage": "https://www.neptunelabs.com/fsi-layers",
   "repository": {
     "type": "git",
-    "url": "https://git.neptunelabs.com/neptunelabs/fsi-layers-samples"
+    "url": "https://github.com/neptunelabs/fsi-layers-samples"
   },
   "license": "Apache-2.0",
   "private": true,
@@ -16,7 +16,7 @@
     "npm": ">=6.0.0"
   },
   "devDependencies": {
-    "@neptunelabs/fsi-samples-framework": "file:../fsi-samples-framework",
+    "@neptunelabs/fsi-samples-framework": "^0.2.11-dev",
     "prettier": "^2.3.2"
   },
   "scripts": {
