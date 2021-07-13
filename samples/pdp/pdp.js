@@ -196,6 +196,7 @@ class PDP {
         inputEl.addEventListener('click', (event) => {
           this.showLayer(groupName, event.target.getAttribute('layerName'))
         })
+
         selectorEl.appendChild(inputEl)
 
         const labelEl = document.createElement('label')
