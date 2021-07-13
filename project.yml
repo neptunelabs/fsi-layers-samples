@@ -1,11 +1,3 @@
 ---
 title: 'FSI Layers Sample'
 projectURL: https://www.neptunelabs.com/fsi-layers/
-# Please change the following the variables ONLY in env.yml
-# To do this, first copy the file env.yml.dist to env.yml
-env:
-  FSI_SERVER: https://fsi-site.neptunelabs.com
-  FSI_CONTEXT: fsi
-  FSI_VIEWER: viewer
-  IMAGES_ROOT: images/samples/layers
-  STATIC_ROOT: assets/samples/layers

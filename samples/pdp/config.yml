@@ -16,7 +16,7 @@ jsfiddle:
   resources:
     - https://cdn.jsdelivr.net/npm/bootstrap@$BOOTSTRAP_VERSION$/dist/css/bootstrap.min.css
     - https://cdn.jsdelivr.net/npm/bootstrap@$BOOTSTRAP_VERSION$/dist/js/bootstrap.bundle.min.js
-    - https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css
+    - https://cdn.jsdelivr.net/npm/bootstrap-icons@$BOOTSTRAP_ICON_VERSION$/font/bootstrap-icons.css
     - $FSI_SERVER$/$FSI_CONTEXT$/viewer/applications/layers/js/fsilayers.js
   tags:
     - FSI

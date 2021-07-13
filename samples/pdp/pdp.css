@@ -7,7 +7,15 @@ body {
   font-size: 0.9rem;
 }
 
-.accordion-button-fixed:after{
+#fsiLayersContainer {
+  height: 500px;
+}
+
+.progress-bar {
+  width: 0
+}
+
+.accordion-button-fixed:after {
   background-image: none !important;
 }
 
@@ -19,20 +27,20 @@ body {
   color: #ffa41c;
 }
 
-.accordion-button:not(.collapsed){
+.accordion-button:not(.collapsed) {
   background-color: #007185 !important;
   color: white;
 }
 
-.accordion-button.collapsed{
+.accordion-button.collapsed {
   color: slategrey;
 }
 
-.btn-pdp-layer{
+.btn-pdp-layer {
   border-color: #007185;
 }
 
-.btn-check:active+.btn-pdp-layer, .btn-check:checked+.btn-pdp-layer, .btn-pdp-layer.active, .btn-pdp-layer.dropdown-toggle.show, .btn-pdp-layer:active {
+.btn-check:active + .btn-pdp-layer, .btn-check:checked + .btn-pdp-layer, .btn-pdp-layer.active, .btn-pdp-layer.dropdown-toggle.show, .btn-pdp-layer:active {
   background-color: #b9cfd5;
 }
 

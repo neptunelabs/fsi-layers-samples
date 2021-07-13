@@ -12,3 +12,5 @@ dist
 fsi-layers
 jsfiddle
 .cache
+
+env.yml
