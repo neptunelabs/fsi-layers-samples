@@ -1,9 +1,13 @@
-let kitchen
-
+/*
+ Called by <fsi-layers> onReady
+ */
 function initKitchen() {
-  kitchen = new Kitchen()
+  new Kitchen()
 }
 
+/*
+ Display Spinner if
+ */
 function loadChange(state) {
   const spnEl = document.getElementById('loadingSpinner')
   if (state) {
@@ -13,14 +17,12 @@ function loadChange(state) {
   }
 }
 
-function cfgChange(el) {
-  kitchen.cfgChange(el)
-}
-
 class Kitchen {
   constructor() {
     this.toasterHSL = [358, 85, 20]
     this.fsiLayersEl = document.getElementById('kitchen')
+
+    // Hide/Show Configuration Menu
     const offCanvasEl = document.getElementById('offcanvasRight')
     offCanvasEl.addEventListener('hidden.bs.offcanvas', function () {
       const btnEl = document.getElementById('btnConfigurator')
@@ -30,8 +32,29 @@ class Kitchen {
       const btnEl = document.getElementById('btnConfigurator')
       btnEl.classList.add('invisible')
     })
+
+    this.addInputEvents()
   }
 
+  /*
+   Add Event Handler to Configurator Menu Items
+   */
+  addInputEvents(){
+    // add event listeners to input elements
+    const self = this;
+    document.querySelectorAll('.cfgInput').forEach(function (el){
+      let evtType;
+      if (el.type === 'range') evtType = 'input'
+      else evtType = 'change'
+      el.addEventListener(evtType, ()=>{
+        self.cfgChange(el)
+      })
+    });
+  }
+
+  /*
+   Change FSI Layers properties
+   */
   cfgChange(el) {
     let layerName
     let propName
@@ -41,9 +64,6 @@ class Kitchen {
         layerName = 'knifes'
         propName = 'hidden'
         propState = el.checked
-        this.fsiLayersEl.setProperties(['knifes'], {
-          hidden: el.checked,
-        })
         break
       case 'checkO2Gen':
         layerName = 'plant'
@@ -126,8 +146,10 @@ class Kitchen {
         propState = 'select(New,Alpha,1),colorize(' + this.toasterHSL.join(',') + ')'
         break
     }
+
     const newProps = {}
     newProps[propName] = propState
+
     if (layerName) {
       this.fsiLayersEl.setProperties([layerName], newProps)
       this.fsiLayersEl.render()

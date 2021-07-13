@@ -13,8 +13,7 @@
 </head>
 <body>
 <div class='position-relative w-100'>
-  <div class='position-absolute spinner-border text-light shadow invisible' id='loadingSpinner'
-       style='width: 5rem; height: 5rem;' role='status'></div>
+  <div class='position-absolute spinner-border text-light shadow invisible cfg-spinner' id='loadingSpinner' role='status'></div>
   <div class='position-absolute top-50 start-50 translate-middle m-4'>
     <button class='btn btn-primary bg-gradient invisible' id='btnConfigurator' type='button' data-bs-toggle='offcanvas'
             data-bs-target='#offcanvasRight' aria-controls='offcanvasRight'>Open Configurator
@@ -55,48 +54,44 @@
       </div>
       <div class='offcanvas-body'>
         <div class='form-check'>
-          <input class='form-check-input' type='checkbox' value='' id='checkChildProof' checked
-                 onchange='cfgChange(this)'>
+          <input class='form-check-input cfgInput' type='checkbox' id='checkChildProof' checked>
           <label class='form-check-label' for='checkChildProof'>
             Childproof
           </label>
         </div>
         <hr/>
         <div class='form-check'>
-          <input class='form-check-input' type='checkbox' value='' id='checkO2Gen' onchange='cfgChange(this)'>
+          <input class='form-check-input cfgInput' type='checkbox' value='' id='checkO2Gen'>
           <label class='form-check-label' for='checkO2Gen'>
             O<sub>2</sub> Generator
           </label>
         </div>
         <hr/>
         <div class='form-check'>
-          <input class='form-check-input' type='checkbox' value='' id='checkSun1' onchange='cfgChange(this)'>
+          <input class='form-check-input cfgInput' type='checkbox' value='' id='checkSun1'>
           <label class='form-check-label' for='checkSun1'>
             Sun Emulator
           </label>
-          <input type='range' class='form-range' id='rangeSun1' min='-150' value='0' max='150' disabled
-                 oninput='cfgChange(this)'>
+          <input type='range' class='form-range cfgInput' id='rangeSun1' min='-150' value='0' max='150' disabled>
         </div>
         <hr/>
         <div class='form-check'>
-          <input class='form-check-input' type='checkbox' value='' id='checkSun2' onchange='cfgChange(this)'>
+          <input class='form-check-input cfgInput' type='checkbox' value='' id='checkSun2'>
           <label class='form-check-label' for='checkSun2'>
             Sun Emulator<p class="m-0"><sub>(Limited Design Edition)</sub></p>
           </label>
-          <input type='range' class='form-range' id='rangeSun2' min='-250' value='0' max='20' disabled
-                 oninput='cfgChange(this)'>
+          <input type='range' class='form-range cfgInput' id='rangeSun2' min='-250' value='0' max='20' disabled>
         </div>
         <hr/>
         <div class='form-check'>
-          <input class='form-check-input' type='checkbox' value='' id='checkChillOut' onchange='cfgChange(this)'>
+          <input class='form-check-input cfgInput' type='checkbox' value='' id='checkChillOut'>
           <label class='form-check-label' for='checkChillOut'>
             Chill-out area
           </label>
           <div>
             <div class='custom-radios'>
               <div>
-                <input type='radio' id='checkChillColor1' name='color' value='color-1' checked disabled
-                       onchange='cfgChange(this)'>
+                <input class='cfgInput' type='radio' id='checkChillColor1' name='color' value='color-1' checked disabled>
                 <label for='checkChillColor1'>
                   <span>
                     <i class='bi bi-check-lg'></i>
@@ -105,8 +100,7 @@
               </div>
 
               <div>
-                <input type='radio' id='checkChillColor2' name='color' value='color-2' disabled
-                       onchange='cfgChange(this)'>
+                <input class='cfgInput' type='radio' id='checkChillColor2' name='color' value='color-2' disabled>
                 <label for='checkChillColor2'>
                   <span>
                     <i class='bi bi-check-lg text-white'></i>
@@ -115,8 +109,7 @@
               </div>
 
               <div>
-                <input type='radio' id='checkChillColor3' name='color' value='color-3' disabled
-                       onchange='cfgChange(this)'>
+                <input class='cfgInput' type='radio' id='checkChillColor3' name='color' value='color-3' disabled>
                 <label for='checkChillColor3'>
                   <span>
                     <i class='bi bi-check-lg text-white'></i>
@@ -125,8 +118,7 @@
               </div>
 
               <div>
-                <input type='radio' id='checkChillColor4' name='color' value='color-4' disabled
-                       onchange='cfgChange(this)'>
+                <input class='cfgInput' type='radio' id='checkChillColor4' name='color' value='color-4' disabled>
                 <label for='checkChillColor4'>
                   <span>
                     <i class='bi bi-check-lg text-white'></i>
@@ -140,11 +132,9 @@
         <div class='form-check'>
           <div>
             <label for='toasterColorHue' class='form-label'>Toaster Hue Value</label>
-            <input type='range' class='form-range' id='toasterColorHue' min='0' value='0' max='360'
-                   onchange='cfgChange(this)'>
+            <input type='range' class='form-range cfgInput' id='toasterColorHue' min='0' value='0' max='360'>
             <label for='toasterColorSat' class='form-label'>Toaster Color Saturation</label>
-            <input type='range' class='form-range' id='toasterColorSat' min='0' value='85' max='100'
-                   onchange='cfgChange(this)'>
+            <input type='range' class='form-range cfgInput' id='toasterColorSat' min='0' value='85' max='100'>
           </div>
         </div>
       </div>
