@@ -6,7 +6,7 @@ function initKitchen() {
 }
 
 /*
- Display Spinner if
+ * Display Spinner if
  */
 function loadChange(state) {
   const spnEl = document.getElementById('loadingSpinner')
@@ -37,23 +37,23 @@ class Kitchen {
   }
 
   /*
-   Add Event Handler to Configurator Menu Items
+   * Add Event Handler to Configurator Menu Items
    */
-  addInputEvents(){
+  addInputEvents() {
     // add event listeners to input elements
-    const self = this;
-    document.querySelectorAll('.cfgInput').forEach(function (el){
-      let evtType;
+    const self = this
+    document.querySelectorAll('.cfgInput').forEach(function (el) {
+      let evtType
       if (el.type === 'range') evtType = 'input'
       else evtType = 'change'
-      el.addEventListener(evtType, ()=>{
+      el.addEventListener(evtType, () => {
         self.cfgChange(el)
       })
-    });
+    })
   }
 
   /*
-   Change FSI Layers properties
+   * Change FSI Layers properties
    */
   cfgChange(el) {
     let layerName

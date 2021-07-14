@@ -13,25 +13,25 @@ First, an overall layer with a reference width & height is set:
 
 Each flower is a single group which contains four layers.
 Each group has a different size and placement in the main div in order to add variety.
-The template ``@@IMAGES_ROOT`` in the src attribute is replaced by Grunt by the variables written in the .env project file.
+The template ``{{{sources.images}}}`` in the src attribute is replaced by Grunt by the variables written in the .env project file.
 Those groups are added to the first fsi-layer-group. The rpx value defines that the sizes will be oriented on the refWidth="1920" refHeight="880" set in the overall group.
 Example small flower:
 ```xml
 <fsi-layer-group name="blue-1" width="222 rpx" height="222 rpx" right="-180 rpx" top="280 rpx">
-  <fsi-layer name="blue-1-4" width="120%" height="120%" rotateCenter="center center" src="@@IMAGES_ROOT/flower/3-blue.png"></fsi-layer>
-  <fsi-layer name="blue-1-3" width="90%" height="90%" rotateCenter="center center" src="@@IMAGES_ROOT/flower/3-green.png" ></fsi-layer>
-  <fsi-layer name="blue-1-2" width="70%" height="70%" rotateCenter="center center" src="@@IMAGES_ROOT/flower/2-yellow.png" ></fsi-layer>
-  <fsi-layer name="blue-1-1" width="38%" height="38%" rotateCenter="center center" hidden="0" src="@@IMAGES_ROOT/flower/1-orange.png" ></fsi-layer>
+  <fsi-layer name="blue-1-4" width="120%" height="120%" rotateCenter="center center" src="{{{sources.images}}}/flower/3-blue.png"></fsi-layer>
+  <fsi-layer name="blue-1-3" width="90%" height="90%" rotateCenter="center center" src="{{{sources.images}}}/flower/3-green.png" ></fsi-layer>
+  <fsi-layer name="blue-1-2" width="70%" height="70%" rotateCenter="center center" src="{{{sources.images}}}/flower/2-yellow.png" ></fsi-layer>
+  <fsi-layer name="blue-1-1" width="38%" height="38%" rotateCenter="center center" hidden="0" src="{{{sources.images}}}/flower/1-orange.png" ></fsi-layer>
 </fsi-layer-group>
 ```
 
 Example big flower:
 ```xml
 <fsi-layer-group name="orange-1" width="600 rpx" height="600 rpx" top="250 rpx" left="200 rpx">
-  <fsi-layer name="orange-1-4" width="120%" height="120%" rotateCenter="center center" rotate="-5" src="@@IMAGES_ROOT/flower/3-orange.png" ></fsi-layer>
-  <fsi-layer name="orange-1-3" width="90%" height="90%" rotateCenter="center center" src="@@IMAGES_ROOT/flower/3-blue.png" ></fsi-layer>
-  <fsi-layer name="orange-1-2" width="70%" height="70%" rotateCenter="center center" src="@@IMAGES_ROOT/flower/2-green.png" ></fsi-layer>
-  <fsi-layer name="orange-1-1" width="38%" height="38%" rotateCenter="center center" src="@@IMAGES_ROOT/flower/1-yellow.png" ></fsi-layer>
+  <fsi-layer name="orange-1-4" width="120%" height="120%" rotateCenter="center center" rotate="-5" src="{{{sources.images}}}/flower/3-orange.png" ></fsi-layer>
+  <fsi-layer name="orange-1-3" width="90%" height="90%" rotateCenter="center center" src="{{{sources.images}}}/flower/3-blue.png" ></fsi-layer>
+  <fsi-layer name="orange-1-2" width="70%" height="70%" rotateCenter="center center" src="{{{sources.images}}}/flower/2-green.png" ></fsi-layer>
+  <fsi-layer name="orange-1-1" width="38%" height="38%" rotateCenter="center center" src="{{{sources.images}}}/flower/1-yellow.png" ></fsi-layer>
 </fsi-layer-group>
 ```
 

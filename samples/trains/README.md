@@ -27,7 +27,7 @@ First, an overall layer with a reference width & height is set and the layers un
 <fsi-layer-group name="container" right="centered" bottom="centered" width="100%" height="100%" refMode="fill" refWidth="3268" refHeight="1530">
   <fsi-layer
     name="background"
-    src="@@IMAGES_ROOT/landscape/background.png"
+    src="{{{sources.images}}}/landscape/background.png"
     width="100%"
     height="100%"
     left="0" top="0"
@@ -41,7 +41,7 @@ First, an overall layer with a reference width & height is set and the layers un
       top="0 rpx"
       opacity="0.5"
       hidden="0"
-      src="@@IMAGES_ROOT/landscape/clouds-back.png"
+      src="{{{sources.images}}}/landscape/clouds-back.png"
     ></fsi-layer>
 
     <fsi-layer
@@ -50,12 +50,12 @@ First, an overall layer with a reference width & height is set and the layers un
       height="600 rpx"
       top="0 rpx"
       hidden="0"
-      src="@@IMAGES_ROOT/landscape/clouds-front.png"
+      src="{{{sources.images}}}/landscape/clouds-front.png"
     ></fsi-layer>
   </fsi-layer-group>
 </fsi-layer-group>
 ```
-The template ``@@IMAGES_ROOT`` in the src attribute is replaced by Grunt by the variables written in the project/env.yml project file.
+The template ``{{{sources.images}}}`` in the src attribute is replaced by Grunt by the variables written in the project/env.yml project file.
 
 ## Movement
 

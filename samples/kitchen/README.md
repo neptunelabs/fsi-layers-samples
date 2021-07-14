@@ -10,7 +10,7 @@ The controls are implemented in Bootstrap for simplicity for this demo.
 
 All elements in the index.html file below the ```<fsi-layers>``` tag are for configurator controls only and can be replaced as desired.
 
-The template ``@@IMAGES_ROOT`` in the src attribute is replaced by Grunt by the variables written in the env.yml project file.
+The template ``{{{sources.images}}}`` in the src attribute is replaced by Grunt by the variables written in the env.yml project file.
 
 In the JavaScript class "Kitchen" only the method ``cfgChange`` is relevant.
 This class is initialized by *FSI-Layers* with the callback ``onReady``. The FSI Layers element is saved as a class property, and the side menu is initialized.

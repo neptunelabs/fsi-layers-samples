@@ -8,7 +8,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <link rel="stylesheet" href="trains.css" type="text/css"/>
   <script src="trains.js"></script>
-  <script src="@@FSI_SERVER/@@FSI_CONTEXT/@@FSI_VIEWER/applications/layers/js/fsilayers.js"></script>
+  <script src='{{{fsi.server}}}/{{{fsi.context}}}/{{{fsi.viewer}}}/applications/layers/js/fsilayers.js'></script>
 </head>
 <body>
 <div class="container">
@@ -22,7 +22,7 @@
                      refWidth="3268" refHeight="1530">
       <fsi-layer
         name="background"
-        src="@@IMAGES_ROOT/landscape/background.png"
+        src="{{{sources.images}}}/landscape/background.png"
         width="100%"
         height="100%"
         left="0" top="0"
@@ -36,7 +36,7 @@
           top="0 rpx"
           opacity="0.5"
           hidden="0"
-          src="@@IMAGES_ROOT/landscape/clouds-back.png"
+          src="{{{sources.images}}}/landscape/clouds-back.png"
         >
         </fsi-layer>
 
@@ -46,7 +46,7 @@
           height="600 rpx"
           top="0 rpx"
           hidden="0"
-          src="@@IMAGES_ROOT/landscape/clouds-front.png"
+          src="{{{sources.images}}}/landscape/clouds-front.png"
         >
         </fsi-layer>
       </fsi-layer-group>
@@ -58,7 +58,7 @@
         hidden="0"
         right="-4 rpx"
         top="654 rpx"
-        src="@@IMAGES_ROOT/landscape/train-blue.png"
+        src="{{{sources.images}}}/landscape/train-blue.png"
       >
       </fsi-layer>
 
@@ -68,7 +68,7 @@
         height="21 rpx"
         top="703 rpx"
         hidden="0"
-        src="@@IMAGES_ROOT/landscape/rail.png"
+        src="{{{sources.images}}}/landscape/rail.png"
       >
       </fsi-layer>
 
@@ -80,7 +80,7 @@
           left="360 rpx"
           top="0%"
           hidden="0"
-          src="@@IMAGES_ROOT/landscape/wm-body.png"
+          src="{{{sources.images}}}/landscape/wm-body.png"
         >
         </fsi-layer>
         <fsi-layer
@@ -91,7 +91,7 @@
           top="-100 rpx"
           rotateCenter="center"
           hidden="0"
-          src="@@IMAGES_ROOT/landscape/wm-blades.png"
+          src="{{{sources.images}}}/landscape/wm-blades.png"
         >
         </fsi-layer>
       </fsi-layer-group>
@@ -103,7 +103,7 @@
           bottom="120 rpx"
           left="0 rpx"
           hidden="0"
-          src="@@IMAGES_ROOT/landscape/water.png"
+          src="{{{sources.images}}}/landscape/water.png"
         >
         </fsi-layer>
         <fsi-layer
@@ -112,7 +112,7 @@
           bottom="120 rpx"
           right="0 rpx"
           hidden="0"
-          src="@@IMAGES_ROOT/landscape/water.png"
+          src="{{{sources.images}}}/landscape/water.png"
         >
         </fsi-layer>
       </fsi-layer-group>
@@ -124,7 +124,7 @@
           left="0"
           bottom="0 rpx"
           hidden="0"
-          src="@@IMAGES_ROOT/landscape/trees1.png"
+          src="{{{sources.images}}}/landscape/trees1.png"
         >
         </fsi-layer>
         <fsi-layer
@@ -134,7 +134,7 @@
           bottom=" rpx"
           rotateCenter="center"
           hidden="0"
-          src="@@IMAGES_ROOT/landscape/trees2.png"
+          src="{{{sources.images}}}/landscape/trees2.png"
         >
         </fsi-layer>
       </fsi-layer-group>

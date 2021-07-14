@@ -12,9 +12,9 @@ jsfiddle:
     js: "kitchen.js"
     css: "kitchen.css"
   resources:
-    - https://cdn.jsdelivr.net/npm/bootstrap@$BOOTSTRAP_VERSION$/dist/css/bootstrap.min.css
-    - https://cdn.jsdelivr.net/npm/bootstrap@$BOOTSTRAP_VERSION$/dist/js/bootstrap.bundle.min.js
-    - $FSI_SERVER$/$FSI_CONTEXT$/viewer/applications/layers/js/fsilayers.js
+    - https://cdn.jsdelivr.net/npm/bootstrap@{{dependencies.bootstrap}}/dist/css/bootstrap.min.css
+    - https://cdn.jsdelivr.net/npm/bootstrap@{{dependencies.bootstrap}}/dist/js/bootstrap.bundle.min.js
+    - "{{{fsi.server}}}/{{{fsi.context}}}/{{{fsi.viewer}}}/applications/layers/js/fsilayers.js"
   tags:
     - FSI
     - FSI Server
