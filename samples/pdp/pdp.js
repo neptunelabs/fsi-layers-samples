@@ -132,7 +132,7 @@ class PDP {
       selAccordionBodyEl.classList.add('accordion-body')
 
       const formSelectorTextEl = document.createElement('div')
-      formSelectorTextEl.setAttribute('id', this.getCheckName(groupName))
+      formSelectorTextEl.id = this.getCheckName(groupName)
       const selectorTextEl = document.createTextNode(this.productData.products[groupName]['_'].name)
       formSelectorTextEl.appendChild(selectorTextEl)
 
@@ -188,13 +188,12 @@ class PDP {
         const inputEl = document.createElement('input')
         inputEl.classList.add('btn-check')
         inputEl.id = this.getSelectorRadioName(groupName, groupKey)
-        inputEl.setAttribute('name', inputEl.id)
-        inputEl.setAttribute('layerName', groupKey)
+        inputEl.dataset.layerName=groupKey
         inputEl.setAttribute('type', 'radio')
         inputEl.setAttribute('autocomplete', 'off')
         inputEl.setAttribute('name', 'sel_' + groupName)
         inputEl.addEventListener('click', (event) => {
-          this.showLayer(groupName, event.target.getAttribute('layerName'))
+          this.showLayer(groupName, event.target.dataset.layerName)
         })
 
         selectorEl.appendChild(inputEl)
@@ -265,8 +264,6 @@ class PDP {
   }
 
   handleLayerSelector(id, visible) {
-    const selectorName = this.getSelectorName(id)
-
     if (visible) {
       // get first layer in group
       if (!this.getSelection(id)) {
