@@ -13,6 +13,12 @@ html {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container-max-server {
+  max-width: 3268px;
 }
 
 fsi-layers {
