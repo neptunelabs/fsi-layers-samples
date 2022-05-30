@@ -4,12 +4,25 @@ function runAnimation() {
 
 class Animation {
   constructor() {
-    this.degree = 0
+    this.thenTime = Date.now()
+    this.petalOut = 0
+    this.petalMid = 0
+    this.petalIn = 0
     this.fsiLayersEl = document.getElementById('flowerGarden')
     this.moveLayers()
   }
 
   moveLayers() {
+
+    this.rafCallID = requestAnimationFrame(() => this.moveLayers())
+
+    let nowTime = Date.now()
+    let elapsedTime = nowTime - this.thenTime
+
+    this.petalOut += elapsedTime / 240.0
+    this.petalMid += elapsedTime / 80.0
+    this.petalIn += elapsedTime / 120.0
+
     this.fsiLayersEl.setProperties(
       [
         'blue-1-4',
@@ -28,7 +41,7 @@ class Animation {
         'yellow-5-4',
         'pink-3-4',
       ],
-      { rotate: this.degree++ / 24 }
+      { rotate: this.petalOut }
     )
 
     this.fsiLayersEl.setProperties(
@@ -49,7 +62,7 @@ class Animation {
         'yellow-5-3',
         'pink-3-3',
       ],
-      { rotate: -this.degree++ / 8 }
+      { rotate: -this.petalMid }
     )
 
     this.fsiLayersEl.setProperties(
@@ -70,11 +83,11 @@ class Animation {
         'yellow-5-2',
         'pink-3-2',
       ],
-      { rotate: this.degree++ / 12 }
+      { rotate: this.petalIn }
     )
 
     this.fsiLayersEl.render()
 
-    this.rafCallID = requestAnimationFrame(() => this.moveLayers())
+    this.thenTime = nowTime
   }
 }
