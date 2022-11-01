@@ -1,8 +1,5 @@
 ---
-title: 'FSI Layers Sample'
+title: 'FSI Layers'
 projectURL: https://www.neptunelabs.com/fsi-layers/
 originAssetPath: layers
 jsFiddleBase: fsi-jsfiddle-samples
-dependencies:
-  bootstrap: 5.1.0
-  bootstrapIcons: 1.5.0
