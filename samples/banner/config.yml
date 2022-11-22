@@ -1,0 +1,19 @@
+title: Animated Banner
+image: logo.png
+description: Shows how a frontpage could look with an animated banner.
+facts:
+  - Layer groups
+  - Object movement
+  - Object rotation
+priority: 0
+jsfiddle:
+  mapping:
+    html: "index.html"
+    css: "banner.css"
+    js: "banner.js"
+  resources:
+    - "{{{fsi.server}}}/{{{fsi.context}}}/{{{fsi.viewer}}}/applications/touchzoom/js/fsitouchzoom.js"
+    - "{{{fsi.server}}}/{{{fsi.context}}}/{{{fsi.viewer}}}/applications/layers/js/fsilayers.js"
+    - https://cdn.jsdelivr.net/npm/bootstrap@{{dependencies.bootstrap}}/dist/css/bootstrap.min.css
+    - https://cdn.jsdelivr.net/npm/bootstrap@{{dependencies.bootstrap}}/dist/js/bootstrap.bundle.min.js
+    - https://cdn.jsdelivr.net/npm/bootstrap-icons@{{dependencies.bootstrapIcons}}/font/bootstrap-icons.css
