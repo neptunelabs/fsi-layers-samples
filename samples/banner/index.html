@@ -24,33 +24,125 @@
     <a class="p-6 d-none d-md-inline-block" href="#">CART</a>
   </nav>
 </header>
-<div class="text-center mx-auto w-100 p-0 banner">
-  <fsi-layers id="banner" useDevicePixelRatio="true" onReady="runAnimation" width="100%" height="100%">
-    <fsi-layer-group name="container" right="centered" bottom="centered" width="100%" height="100%" refMode="fill" refWidth="1920" refHeight="">
-      <fsi-layer-group name="beige" width="222 rpx" height="222 rpx" right="-180 rpx" top="280 rpx">
-        <fsi-layer name="beige-1" width="120%" height="120%"  src="{{{sources.images}}}/banner/banner-beige.png"></fsi-layer>
-        <fsi-layer name="beige-1" width="90%" height="90%"  src="{{{sources.images}}}/banner/banner-beige1.png" ></fsi-layer>
-      </fsi-layer-group>
+<div class="position-absolute text-center mx-auto w-100 mb-5">
+  <fsi-layers id="bannerFSILayer"   width="1920"
+              height="422" onReady="animateBanner">
 
-        <fsi-layer name="green" width="120%" height="120%" right="100 rpx" top="0 rpx" src="{{{sources.images}}}/banner/banner-blue.png" ></fsi-layer>
-        <fsi-layer name="blue" width="90%" height="90%" left="210 rpx" bottom="180 rpx" src="{{{sources.images}}}/banner/banner-green.png" ></fsi-layer>>
+    <fsi-layer-group
+      name="background"
+      name="elements"
+      width="100%"
+      height="100%"
+      right="0"
+      top="0"
+    opacity="0.8">
+    <fsi-layer
+      name="background1"
+      right="-20"
+      width="100%"
+      src="{{{fsi.server}}}/{{{fsi.context}}}/static/assets/samples/layers/banner/banner-background.svg">
+    </fsi-layer>
+      <fsi-layer
+        name="background2"
+        left="0"
+        top="0"
+        width="100%"
+        src="{{{fsi.server}}}/{{{fsi.context}}}/static/assets/samples/layers/banner/banner-background-small.svg">
+      </fsi-layer>
     </fsi-layer-group>
+
+    <fsi-layer
+      name="furniture"
+      width="200%"
+      height="200%"
+      top="-200"
+      left="150"
+      hidden="0"
+      src="{{{sources.images}}}/banner/furniture-banner.png"
+    >
+    </fsi-layer>
+    <fsi-layer
+      name="sale"
+      height="50%"
+      bottom="-200"
+      left="-100"
+      opacity="0.9"
+      src="{{{fsi.server}}}/{{{fsi.context}}}/static/assets/samples/layers/banner/sale-place.svg">
+    </fsi-layer>
+    <fsi-layer
+      name="sale-70"
+      height="50%"
+      bottom="60"
+      left="10"
+      opacity="0"
+      hidden="0"
+      src="{{{fsi.server}}}/{{{fsi.context}}}/static/assets/samples/layers/banner/sale-70.svg">
+    </fsi-layer>
+    <fsi-layer-group
+      name="elements"
+      width="100%"
+      height="100%"
+      right="0"
+      top="0">
+      <fsi-layer
+        name="middle"
+        height="20%"
+        top="50"
+        opacity="0.9"
+        left="900"
+        src="{{{sources.images}}}/banner/circle.png">
+      </fsi-layer>
+      <fsi-layer
+        name="middle-dark"
+        height="10%"
+        top="100"
+        opacity="0.6"
+        left="950"
+        src="{{{sources.images}}}/banner/circle-dark.png">
+      </fsi-layer>
+      <fsi-layer
+        name="right-upper"
+        height="80%"
+        top="-200"
+        opacity="0.9"
+        right="-100"
+        src="{{{sources.images}}}/banner/circle.png">
+      </fsi-layer>
+      <fsi-layer
+        name="left-lower"
+        height="60%"
+        bottom="-200"
+        opacity="0.5"
+        left="300"
+        src="{{{sources.images}}}/banner/circle-dark.png">
+      </fsi-layer>
+      <fsi-layer
+        name="left-upper"
+        height="30%"
+        top="80"
+        opacity="0.3"
+        left="-80"
+        src="{{{sources.images}}}/banner/circle-dark.png">
+      </fsi-layer>
+    </fsi-layer-group>
+
   </fsi-layers>
+</div>
 <div class="row position-relative text-center w-100">
-  <div class="col-md-4 col-sm-2 pb-lg-5 my-lg-5">
-    <img class="sale-badge" src="{{{fsi.server}}}/{{{fsi.context}}}/static/assets/samples/ssi/sale.svg" height="300">
-  </div>
-  <div class="col-md-8 col-sm-10 pt-lg-5 my-lg-5 pb-sm-1">
-    <h2 class="display-5 fw-normal">Black Friday</h2>
-    <p class="lead fw-normal">Check out our furniture sale.</p>
+  <div class="col-md-7 col-sm-2 pb-lg-5 my-lg-5">
+ </div>
+  <div class="col-md-5 col-sm-10 pt-lg-5 my-lg-5 pb-sm-1">
+    <h2 class="display-5 fw-normal pt-lg-5">Year End Clearance!</h2>
+    <p class="lead fw-normal">To make space in our showroom we must clear many existing ranges. <br/>Check out our furniture sale.</p>
     <a class="btn btn-outline-custom" href="#">SHOP NOW</a>
   </div>
 </div>
 </div>
 
+
 <main class="content mx-auto">
-  <div class="d-md-flex bg-light flex-md-equal w-100 py-3 mx-auto text-center overflow-hidden">
-    <h2 class="display-5">Featured Products</h2>
+  <div class="d-md-flex bg-light flex-md-equal w-100 py-3 mx-auto text-center overflow-hidden pt-5">
+    <h2 class="display-5 mt-5">Featured Products</h2>
   </div>
 
   <div class="row bg-light row-cols-1 row-cols-sm-2 row-cols-md-6 g-3 px-5 py-3 w-100">
