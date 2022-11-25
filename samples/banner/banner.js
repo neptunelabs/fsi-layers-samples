@@ -12,9 +12,9 @@ class BannerAnimation {
     this.ySale = -100
     this.dirSale = 6
     this.speedSale = 15
+
     this.textOpacity = 0
     this.dirOp = 0.2
-    this.text = 0
     this.speedText = 300
 
     this.fsiLayersEl = document.getElementById('bannerFSILayer')
