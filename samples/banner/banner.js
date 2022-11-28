@@ -42,6 +42,15 @@ class BannerAnimation {
 
     this.xSale += this.dirSale * (elapsedTime / this.speedSale)
 
+
+    setTimeout(() => {
+      this.fsiLayersEl.setProperties(['furniture'], {
+        hidden: 1
+      })
+      this.fsiLayersEl.setProperties(['furniture2'], {
+        hidden: 0
+      }) }, 5000);
+
     if (this.xSale > -200) {
       this.speedSale = 0
       this.fsiLayersEl.setProperties(['sale'], {

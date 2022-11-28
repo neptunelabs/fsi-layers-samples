@@ -24,43 +24,99 @@
     <a class="p-6 d-none d-md-inline-block" href="#">CART</a>
   </nav>
 </header>
-<div class="position-absolute text-center mx-auto w-100 mb-5">
+<div class="position-absolute text-center w-100 mb-5 banner">
   <fsi-layers id="bannerFSILayer"   width="100%"
               height="422" onReady="animateBanner">
 
     <fsi-layer-group
       name="background"
-      name="elements"
       width="100%"
       height="100%"
-      right="0"
-      top="0"
+      right="0 rpx"
+      top="0 rpx"
     opacity="0.8">
     <fsi-layer
       name="background1"
-      right="-20"
+      right="-20 rpx"
       width="100%"
       src="{{{fsi.server}}}/{{{fsi.context}}}/static/assets/samples/layers/banner/banner-background.svg">
     </fsi-layer>
       <fsi-layer
         name="background2"
-        left="0"
-        top="0"
+        left="0 rpx"
+        top="0 rpx"
         width="100%"
         src="{{{fsi.server}}}/{{{fsi.context}}}/static/assets/samples/layers/banner/banner-background-small.svg">
       </fsi-layer>
     </fsi-layer-group>
-
-    <fsi-layer
-      name="furniture"
-      width="200%"
-      height="200%"
-      top="-200"
-      left="150"
-      hidden="0"
-      src="{{{sources.images}}}/banner/furniture-banner.png"
-    >
-    </fsi-layer>
+    <fsi-layer-group
+      name="image"
+      width="100%"
+      height="100%"
+      right="0 rpx"
+      top="0 rpx"
+      opacity="1">
+      <fsi-layer
+        name="furniture"
+        width="200%"
+        height="200%"
+        top="-200"
+        left="150"
+        hidden="0"
+        src="{{{sources.images}}}/banner/furniture-banner.png"
+      >
+      </fsi-layer>
+        <fsi-layer
+          name="furniture1"
+          width="200%"
+          height="200%"
+          top="-200"
+          left="150"
+          hidden="1"
+          src="{{{sources.images}}}/banner/furniture-banner-1.png"
+        >
+        </fsi-layer>
+          <fsi-layer
+            name="furniture2"
+            width="200%"
+            height="200%"
+            top="-200"
+            left="150"
+            hidden="1"
+            src="{{{sources.images}}}/banner/furniture-banner-2.png"
+          >
+          </fsi-layer>
+            <fsi-layer
+              name="furniture3"
+              width="200%"
+              height="200%"
+              top="-200"
+              left="150"
+              hidden="1"
+              src="{{{sources.images}}}/banner/furniture-banner-3.png"
+            >
+            </fsi-layer>
+              <fsi-layer
+                name="furniture4"
+                width="200%"
+                height="200%"
+                top="-200"
+                left="150"
+                hidden="1"
+                src="{{{sources.images}}}/banner/furniture-banner-4.png"
+              >
+              </fsi-layer>
+                <fsi-layer
+                name="furniture5"
+                width="200%"
+                height="200%"
+                top="-200"
+                left="150"
+                hidden="1"
+                src="{{{sources.images}}}/banner/furniture-banner-5.png"
+              >
+                </fsi-layer>
+    </fsi-layer-group>
     <fsi-layer
       name="sale"
       height="50%"
@@ -128,7 +184,7 @@
 
   </fsi-layers>
 </div>
-<div class="row position-relative text-center w-100">
+<div class="row position-relative text-center w-100 banner mx-auto">
   <div class="col-md-7 col-sm-2 pb-lg-5 my-lg-5">
  </div>
   <div class="col-md-5 col-sm-10 pt-lg-5 my-lg-5 pb-sm-1">

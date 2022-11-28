@@ -6,6 +6,13 @@
   max-width: 960px;
 }
 
+.banner {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1920px;
+}
+
 .site-header {
   background-color: rgba(0, 0, 0, .85);
   -webkit-backdrop-filter: saturate(180%) blur(20px);
