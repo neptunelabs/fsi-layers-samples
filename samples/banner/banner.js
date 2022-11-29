@@ -16,10 +16,18 @@ class BannerAnimation {
     this.textOpacity = 0
     this.dirOp = 0.2
     this.speedText = 300
+    this.currentImage = 0
+    this.images = [
+       "{{{sources.images}}}/banner/furniture-banner-5.png",
+       "{{{sources.images}}}/banner/furniture-banner-1.png",
+       "{{{sources.images}}}/banner/furniture-banner-2.png",
+       "{{{sources.images}}}/banner/furniture-banner-3.png"
+     ]
 
     this.fsiLayersEl = document.getElementById('bannerFSILayer')
 
     this.moveLayers()
+
   }
 
   moveLayers() {
@@ -38,18 +46,13 @@ class BannerAnimation {
       opacity: this.textOpacity,
     })
 
+    this.fsiLayersEl.setProperties(['sale-70'], {
+      opacity: this.textOpacity,
+    })
+
     this.textOpacity += this.dirOp * (elapsedTime / this.speedText)
 
     this.xSale += this.dirSale * (elapsedTime / this.speedSale)
-
-
-    setTimeout(() => {
-      this.fsiLayersEl.setProperties(['furniture'], {
-        hidden: 1
-      })
-      this.fsiLayersEl.setProperties(['furniture2'], {
-        hidden: 0
-      }) }, 5000);
 
     if (this.xSale > -200) {
       this.speedSale = 0
@@ -64,6 +67,25 @@ class BannerAnimation {
     if (this.textOpacity < 0.1) {
       this.dirOp = 0.1
     }
+
+    setTimeout(() => {
+      switchImage }, 1000);
+
+    function switchImage () {
+      if (this.currentImage < this.images.length - 1) {
+        console.log("jo", this.images[this.currentImage], this.images.length, this.currentImage)
+        this.currentImage = this.currentImage + 1
+      } else {
+        console.log("no", this.currentImage, this.images.length, this.currentImage)
+        this.currentImage = 0
+      }
+    }
+
+    this.fsiLayersEl.setProperties(['furniture'], {
+      src: this.images[this.currentImage],
+    })
+
+    console.log ("test", this.images[this.currentImage], this.images.length, this.currentImage)
 
     this.fsiLayersEl.render()
 
