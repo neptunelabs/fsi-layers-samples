@@ -1,4 +1,12 @@
-title: Starter
-image: logo.png
-description: Start your own demo
-priority: 99
+overview:
+  title: Starter
+  image: logo.png
+  description: Start your own demo
+  order: 99
+sample:
+  mapping:
+    html: 'index.html'
+    js: 'starter.js'
+    css: 'starter.css'
+jsfiddle:
+  deploy: false

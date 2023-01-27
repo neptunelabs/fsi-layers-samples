@@ -1,12 +1,4 @@
-body,
-html {
-  width: 100%;
-  height: 100%;
-  margin: auto;
-  font-family: sans-serif;
-}
-
-.container {
+.container-t {
   width: 100%;
   height: 100%;
   overflow: hidden;

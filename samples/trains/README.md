@@ -1,11 +1,11 @@
 # Trains - FSI Layers Animation Example
 
-This demo shows a simple animaton example based on *FSI Layers*.
+This demo shows a simple animation example based on *FSI Layers*.
 
 ### Description
 
-The animation is dealt with in the trains.js:
-This is initialized by *FSI-Layers* with the callback ``onReady``.
+The animation is handled by trains.js:
+This is initialised by *FSI-Layers* with the callback ``onReady``.
 
 ```javascript
 function runTrains() {
@@ -55,11 +55,11 @@ First, an overall layer with a reference width & height is set and the layers un
   </fsi-layer-group>
 </fsi-layer-group>
 ```
-The template ``{{{sources.images}}}`` in the src attribute is replaced by Grunt by the variables written in the project/env.yml project file.
+The template ``{{sources.images}}}`` in the src attribute is replaced by Grunt by the variables written in the project/env.yml project file.
 
-## Movement
+## Motion
 
-The base parameters are set which are used for the animation.
+The basic parameters used for the animation are set.
 Then the fsi-layers instance is returned with *getElementsByTagName*.
 ```javascript
 class TrainsRunning {
@@ -86,11 +86,12 @@ class TrainsRunning {
   ...
 ```
 
-By using the function moveLayers the FSI Layer method *setProperties* ([see manual for more information](https://docs.neptunelabs.com/fsi-viewer/latest/fsi-layers/javascript-interface)) is called.
+The function moveLayers calls the FSI layer method *setProperties* ([see the manual for more information](https://docs.neptunelabs.com/fsi-viewer/latest/fsi-layers/javascript-interface)).
 
 With the parameters *rotate*, *left*, *right* & *bottom* the layers are animated ([all available parameters for FSI Layers](https://docs.neptunelabs.com/fsi-viewer/latest/fsi-layers/parameters)).
 
-Afterwards, *render* renders the current state of FSI Layers. It's important to only call this after changing properties.
+Then *render* renders the current state of the FSI layers. It's important to call this only after changing properties.
+
 ```javascript
 moveLayers() {
   this.layers.setProperties(["windmill-blades"], { rotate: this.rMill++ });

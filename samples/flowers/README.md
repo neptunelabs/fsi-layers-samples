@@ -1,77 +1,99 @@
 # Flowers - FSI Layers Rotation Example
 
-This readme describes how the rotating flowers sample with *FSI Layers* is achieved.
-The aim of the demo is to show how single layers of a group can be addressed and animated.
+This readme describes how the rotating flowers example is achieved with *FSI Layers*.
+The aim of the demo is to show how individual layers of a group can be addressed and animated.
+
+Add FSI Layers to your site:
+
+```xml
+ <fsi-layers id="flowerGarden" useDevicePixelRatio="true" onReady="runAnimation" width="100%" height="100%">
+</fsi-layers>
+```
 
 # Adding groups and layers
 
-First, an overall layer with a reference width & height is set:
+First, an overall layer is set with a reference width and height:
 ```xml
 <fsi-layer-group name="container" right="centered" bottom="centered" width="100%" height="100%" refMode="fill" refWidth="1920" refHeight="880">
 </fsi-layer-group>
 ```
 
-Each flower is a single group which contains four layers.
-Each group has a different size and placement in the main div in order to add variety.
-The template ``{{{sources.images}}}`` in the src attribute is replaced by Grunt by the variables written in the .env project file.
-Those groups are added to the first fsi-layer-group. The rpx value defines that the sizes will be oriented on the refWidth="1920" refHeight="880" set in the overall group.
+Each flower is a single group containing three layers.
+Each group has a different size and placement in the main div for variety.
+The template ``{{{sources.images}}}`` in the src attribute is replaced by Grunt with the variables written in the .env project file.
+These groups are added to the first fsi-layer-group. The rpx value defines that the sizes will be oriented to the refWidth="1920" refHeight="880" set in the overall group.
+
 Example small flower:
 ```xml
-<fsi-layer-group name="blue-1" width="222 rpx" height="222 rpx" right="-180 rpx" top="280 rpx">
-  <fsi-layer name="blue-1-4" width="120%" height="120%" rotateCenter="center center" src="{{{sources.images}}}/flower/3-blue.png"></fsi-layer>
-  <fsi-layer name="blue-1-3" width="90%" height="90%" rotateCenter="center center" src="{{{sources.images}}}/flower/3-green.png" ></fsi-layer>
-  <fsi-layer name="blue-1-2" width="70%" height="70%" rotateCenter="center center" src="{{{sources.images}}}/flower/2-yellow.png" ></fsi-layer>
-  <fsi-layer name="blue-1-1" width="38%" height="38%" rotateCenter="center center" hidden="0" src="{{{sources.images}}}/flower/1-orange.png" ></fsi-layer>
+<fsi-layer-group name="pink-1" width="222 rpx" height="222 rpx" right="-180 rpx" top="280 rpx">
+  <fsi-layer name="pink-1-4" width="120%" height="120%" rotateCenter="center center" src="{{{sources.images}}}/flower/photos/pink.png"></fsi-layer>
+  <fsi-layer name="pink-1-3" width="90%" height="90%" rotateCenter="center center" src="{{{sources.images}}}/flower/photos/pink.png" ></fsi-layer>
+  <fsi-layer name="pink-1-2" width="70%" height="70%" rotateCenter="center center" src="{{{sources.images}}}/flower/photos/pink.png" ></fsi-layer>
 </fsi-layer-group>
 ```
 
 Example big flower:
 ```xml
-<fsi-layer-group name="orange-1" width="600 rpx" height="600 rpx" top="250 rpx" left="200 rpx">
-  <fsi-layer name="orange-1-4" width="120%" height="120%" rotateCenter="center center" rotate="-5" src="{{{sources.images}}}/flower/3-orange.png" ></fsi-layer>
-  <fsi-layer name="orange-1-3" width="90%" height="90%" rotateCenter="center center" src="{{{sources.images}}}/flower/3-blue.png" ></fsi-layer>
-  <fsi-layer name="orange-1-2" width="70%" height="70%" rotateCenter="center center" src="{{{sources.images}}}/flower/2-green.png" ></fsi-layer>
-  <fsi-layer name="orange-1-1" width="38%" height="38%" rotateCenter="center center" src="{{{sources.images}}}/flower/1-yellow.png" ></fsi-layer>
+        <fsi-layer-group name="sunflower-2" width="600 rpx" height="600 rpx" top="250 rpx" left="200 rpx">
+  <fsi-layer name="sunflower-2-4" width="120%" height="120%" rotateCenter="center center" rotate="-5" src="{{{sources.images}}}/flower/photos/sunflower.png" ></fsi-layer>
+  <fsi-layer name="sunflower-2-3" width="100%" height="100%" rotateCenter="center center" src="{{{sources.images}}}/flower/photos/sunflower.png" ></fsi-layer>
+  <fsi-layer name="sunflower-2-2" width="90%" height="90%" rotateCenter="center center" src="{{{sources.images}}}/flower/photos/sunflower.png" ></fsi-layer>
 </fsi-layer-group>
 ```
 
 ## Movement
 
-The **flowers.js** script embedded deals with the animation:
-```html
-<script src="flowers.js"></script>
+The embedded **flowers.js** script handles the animation.
+
+First the fsi-layers instance is returned with *getElementById*.
+
+```javascript
+this.fsiLayersEl = document.getElementById('flowerGarden')
 ```
 
-First the fsi-layers instance is returned with *getElementsByTagName*.
-By using the function moveLayers the FSI Layer method *setProperties* ([see manual for more information](https://docs.neptunelabs.com/fsi-viewer/latest/fsi-layers/javascript-interface)) is called.
+The moveLayers function calls the FSI layer method *setProperties* ([see the manual for more information](https://docs.neptunelabs.com/fsi-viewer/latest/fsi-layers/javascript-interface)).
 
 The last layer (the dot in the middle) is never moved, while the other layers are animated with the parameter
 *rotate* ([all available parameters for FSI Layers](https://docs.neptunelabs.com/fsi-viewer/latest/fsi-layers/parameters)).
 
-The animation speed and rotation direction differs for each layer in a group in order to create a more interesting movement.
+The animation speed and rotation direction are different for each layer in a group to create a more interesting movement.
 
-Afterwards, *render* renders the current state of FSI Layers. It's important to only call this after changing properties.
 ```javascript
-class Animation {
-
- ...
-
-  moveLayers() {
-    this.layers.setProperties(["blue-1-4","orange-1-4"], {rotate: this.degree++/24});
-    this.layers.setProperties(["blue1-3","orange-1-3"], {rotate: -this.degree++/8});
-    this.layers.setProperties(["blue-1-2", "orange-1-2"], {rotate: this.degree++/12});
-    this.layers.render();
-    this.rafCallID = requestAnimationFrame(() => this.moveLayers());
-   }
-}
+this.petalOut += elapsedTime / 240.0
+this.petalMid += elapsedTime / 80.0
+this.petalIn += elapsedTime / 120.0
 ```
 
-The animation function is called in onReady from a callback defined in fsi-layer tag:
+This is how one set of layers (of each flower) receives the properties:
 
 ```javascript
-function runAnimation(){
-  new Animation();
-}
+ ...
+this.fsiLayersEl.setProperties(
+  [
+    'pink-1-4',
+    'gerbera-1-4',
+    'sunflower-1-4',
+    'sunflowero-1-4',
+    'cosmea-1-4',
+    'sunflowero-2-4',
+    'pink-2-4',
+    'sunflower-2-4',
+    'dahlia-1-4',
+    'cosmea-1-4',
+    'pink-4-4',
+    'gerbera-2-4',
+    'pink-3-4',
+    'gerbera-3-4',
+    'dahlia-2-4',
+    'cosmea-2-4',
+  ],
+  { rotate: this.petalOut }
+)
+```
+After setting properties to all layers, *render* renders the current state of FSI Layers. It's important to only call this after changing properties.
+
+```javascript
+this.fsiLayersEl.render()
 ```
 
 ## Testing with examples from  your own server
