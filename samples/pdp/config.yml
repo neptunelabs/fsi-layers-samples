@@ -13,7 +13,6 @@ sample:
     components:
       menu:
         template: data/misc-menu.yml
-      highlight: DEAL OF THE DAY
       footer:
         viewer:
           link: https://www.neptunelabs.com/fsi-layers/

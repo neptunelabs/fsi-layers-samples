@@ -188,7 +188,7 @@ class PDP {
         const inputEl = document.createElement('input')
         inputEl.classList.add('btn-check')
         inputEl.id = this.getSelectorRadioName(groupName, groupKey)
-        inputEl.dataset.layerName=groupKey
+        inputEl.dataset.layerName = groupKey
         inputEl.setAttribute('type', 'radio')
         inputEl.setAttribute('autocomplete', 'off')
         inputEl.setAttribute('name', 'sel_' + groupName)
@@ -202,9 +202,7 @@ class PDP {
         labelEl.classList.add('btn', 'btn-pdp-layer', 'm-1')
         labelEl.setAttribute('for', inputEl.id)
 
-        const tooltip = new bootstrap.Tooltip(labelEl, {
-          title: data.comment,
-        })
+        new bootstrap.Tooltip(labelEl, { title: data.comment })
 
         const labelImgEl = document.createElement('img')
         labelImgEl.setAttribute('height', '80')
@@ -391,8 +389,8 @@ class PDP {
     const elX = (rect.right - rect.left) / 2 + rect.left
     const elY = (rect.bottom - rect.top) / 2 + rect.top
 
-    const dx = elX + (window.pageXOffset || document.documentElement.scrollLeft) - mouseEvent.pageX
-    const dy = elY + (window.pageYOffset || document.documentElement.scrollTop) - mouseEvent.pageY
+    const dx = elX + (window.scrollX || document.documentElement.scrollLeft) - mouseEvent.pageX
+    const dy = elY + (window.scrollY || document.documentElement.scrollTop) - mouseEvent.pageY
 
     return Math.abs(Math.round(Math.sqrt(dx * dx + dy * dy)))
   }

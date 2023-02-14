@@ -1,5 +1,6 @@
 .container-t {
   width: 100%;
+  max-width: 3268px;
   height: 100%;
   overflow: hidden;
   display: flex;
@@ -7,10 +8,6 @@
   flex-wrap: nowrap;
   margin-left: auto;
   margin-right: auto;
-}
-
-.container-max-server {
-  max-width: 3268px;
 }
 
 fsi-layers {
@@ -27,6 +24,6 @@ fsi-layers {
   background-color: white;
   opacity: 0.5;
   border: solid 1px gray;
-  border-radius: 2em;
+  border-radius: 1em;
   padding: 1pt;
 }
