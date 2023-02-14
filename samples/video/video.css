@@ -24,3 +24,7 @@
 fsi-layers {
   width: 100%;
 }
+
+.feature-card {
+  transform: translate(280%, 50%);
+}
