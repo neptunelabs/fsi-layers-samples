@@ -1,0 +1,36 @@
+overview:
+  title: Product Video
+  image: logo.png
+  description: Multiple images are rendered and moved as parallax.
+  facts:
+    - Object movement
+    - Object rotation
+    - Reference Sizing
+  order: 5
+sample:
+  template:
+    schema: framework-2023
+    components:
+      menu:
+        template: data/clothing-menu.yml
+      featured:
+        template: data/clothing-featured.yml
+      highlight: DEAL OF THE DAY
+      footer:
+        credits:
+          photos:
+            - author: Artem Bondarchuk
+              link: https://unsplash.com/@artembondarchuk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+              platform: Unsplash
+          viewer:
+            link: https://www.neptunelabs.com/fsi-viewer/
+      fsi:
+        layers: true
+      bootstrap:
+        icons: true
+  mapping:
+    html: "index.html"
+    js: "video.js"
+    css: "video.css"
+jsfiddle:
+  deploy: true

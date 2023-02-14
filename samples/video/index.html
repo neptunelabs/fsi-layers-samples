@@ -1,0 +1,39 @@
+<div class="container position-relative ratio ratio-16x9">
+
+  <video class="position-absolute video-container" loop autoplay>
+    <source src="https://fsi-site-origin.neptunelabs.com/fsi/static/video/forest-4k.mp4/h264.1.mp4" type="video/mp4">
+  </video>
+
+  <fsi-layers
+    class='position-absolute'
+    id="trainsFSILayer"
+    useDevicePixelRatio="true"
+    debug="1"
+    onReady="runTrains"
+  >
+    <fsi-layer-group name="container" right="centered" bottom="centered" width="100%" height="100%" refMode="fit"
+                     refWidth="3840" refHeight="2160" clip="false">
+
+      <fsi-layer
+        name="tourist"
+        width="1000 rpx"
+        left='1420 rpx'
+        top="200 rpx"
+        src="{{{sources.images}}}/video/tourist.png"
+      ></fsi-layer>
+
+    </fsi-layer-group>
+  </fsi-layers>
+
+  <div class="card position-absolute w-25 h-50 shadow top-50 start-100 translate-middle ms-5">
+    <h5 class="card-header">Featured</h5>
+    <div class="card-body">
+      <h5 class="card-title">Hiking equipment</h5>
+      <p class="card-text">Including Walking backpack, Hiking pants and shirt,
+        poles, approach shoes, straw hat, rain cover, walking socks
+        and much more</p>
+    </div>
+    <div class="card-footer"><a href="#" class="btn btn-primary">Buy now</a></div>
+  </div>
+
+</div>

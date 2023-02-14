@@ -19,9 +19,9 @@ class PDP {
    Load a JSON via REST - there is no exception handling here
    */
   init() {
-    let reqHeader = new Headers()
+    const reqHeader = new Headers()
     reqHeader.append('Content-Type', 'text/json')
-    let initObject = {
+    const initObject = {
       method: 'GET',
       headers: reqHeader,
     }
@@ -397,7 +397,7 @@ class PDP {
 }
 
 // Start everything if DOM is ready
-document.addEventListener('DOMContentLoaded', (event) => {
+document.addEventListener('DOMContentLoaded', () => {
   // load and init product data
   const pdl = new PDP(productDataFile)
   pdl.init()
