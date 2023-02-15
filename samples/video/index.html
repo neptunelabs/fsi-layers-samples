@@ -1,37 +1,53 @@
 <div class="container position-relative ratio ratio-16x9">
-
-  <video width="3840" height="2160" nocontrols autoplay loop poster="https://fsi-site-origin.neptunelabs.com/fsi/static/video/forest-4k.mp4/poster.01.jpg">
-    <source src="https://fsi-site-origin.neptunelabs.com/fsi/static/video/forest-4k.mp4/h264.1.mp4?range=0-" type='video/mp4; codecs="avc1.42E01E"' />
-    <source src="https://fsi-site-origin.neptunelabs.com/fsi/static/video/forest-4k.mp4/av1.1.mp4?range=0-" type='video/mp4; codecs="av01.0.04M.08"' />
-    <source src="https://fsi-site-origin.neptunelabs.com/fsi/static/video/forest-4k.mp4/h265.1.mp4?range=0-" type='video/mp4; codecs="hev1.1.6.L93.B0"' />
+  <video
+    autoplay="autoplay"
+    loop="loop"
+    muted="muted"
+    poster="https://fsi-site-origin.neptunelabs.com/fsi/static/video/forest-4k.mp4/poster.01.jpg"
+  >
+    <source
+      src="https://fsi-site-origin.neptunelabs.com/fsi/static/video/forest-4k.mp4/av1.1.mp4"
+      type='video/mp4; codecs="av01.0.04M.08"'
+    />
+    <source
+      src="https://fsi-site-origin.neptunelabs.com/fsi/static/video/forest-4k.mp4/h265.1.mp4"
+      type='video/mp4; codecs="hev1.1.6.L93.B0"'
+    />
+    <source
+      src="https://fsi-site-origin.neptunelabs.com/fsi/static/video/forest-4k.mp4/h264.1.mp4"
+      type='video/mp4; codecs="avc1.42E01E"'
+    />
     Your browser does not support the video tag.
   </video>
 
-  <fsi-layers
-    class='position-absolute'
-    id="trainsFSILayer"
-    useDevicePixelRatio="true"
-    debug="1"
-    onReady="runTrains"
-  >
-    <fsi-layer-group name="container" right="centered" bottom="centered" width="100%" height="100%" refMode="fit"
-                     refWidth="3840" refHeight="2160" clip="false">
+  <fsi-layers class="position-absolute" debug="1" id="trainsFSILayer" onReady="runTrains" useDevicePixelRatio="true">
+    <fsi-layer-group
+      bottom="centered"
+      clip="false"
+      height="100%"
+      name="container"
+      refHeight="2160"
+      refMode="fit"
+      refWidth="3840"
+      right="centered"
+      width="100%"
+    >
       <fsi-layer
+        left="1420 rpx"
         name="tourist"
-        width="1000 rpx"
-        left='1420 rpx'
-        top="200 rpx"
         src="{{{sources.images}}}/video/tourist-superdark.png"
+        top="200 rpx"
+        width="1000 rpx"
       ></fsi-layer>
-
     </fsi-layer-group>
   </fsi-layers>
 
-  <div class="card position-absolute w-25 h-50 shadow feature-card">
+  <div class="card position-absolute w-25 h-50 shadow feature-card d-none d-xxl-block">
     <h5 class="card-header">Featured</h5>
     <div class="card-body">
       <h5 class="card-title">Hiking equipment</h5>
-      <div class="card-text">Including
+      <div class="card-text">
+        Including
         <ul>
           <li>Walking backpack</li>
           <li>Hiking pants and shirt</li>
@@ -42,7 +58,6 @@
         </ul>
       </div>
     </div>
-    <div class="card-footer"><a href="#" class="btn btn-primary">Buy now</a></div>
+    <div class="card-footer"><a class="btn btn-primary" href="#">Buy now</a></div>
   </div>
-
 </div>
