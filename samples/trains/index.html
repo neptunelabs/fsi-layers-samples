@@ -1,18 +1,23 @@
 <div class="container-t vh-100">
-  <fsi-layers
-    id="trainsFSILayer"
-    useDevicePixelRatio="true"
-    debug="1"
-    onReady="runTrains"
-  >
-    <fsi-layer-group name="container" right="centered" bottom="centered" width="100%" height="100%" refMode="fit"
-                     refWidth="3268" refHeight="1530" clip="true">
+  <fsi-layers id="trainsFSILayer" useDevicePixelRatio="true" debug="1" onReady="runTrains">
+    <fsi-layer-group
+      name="container"
+      right="centered"
+      bottom="centered"
+      width="100%"
+      height="100%"
+      refMode="fit"
+      refWidth="3268"
+      refHeight="1530"
+      clip="true"
+    >
       <fsi-layer
         name="background"
         src="{{{sources.images}}}/landscape/background.png"
         width="100%"
         height="100%"
-        left="0" top="0"
+        left="0"
+        top="0"
       ></fsi-layer>
 
       <fsi-layer-group name="clouds">
@@ -59,8 +64,16 @@
       >
       </fsi-layer>
 
-      <fsi-layer-group name="windmill" left="200 rpx" top="594 rpx" width="318 rpx" height="468 rpx" refMode="fit"
-                       refWidth="318" refHeight="468">
+      <fsi-layer-group
+        name="windmill"
+        left="200 rpx"
+        top="594 rpx"
+        width="318 rpx"
+        height="468 rpx"
+        refMode="fit"
+        refWidth="318"
+        refHeight="468"
+      >
         <fsi-layer
           name="windmill-body"
           width="152 rpx"
@@ -129,12 +142,7 @@
 
 <div class="credits">
   Sources:
-  <a href="https://www.vecteezy.com/free-vector/windmill"
-  >Windmill Vectors by Vecteezy</a
-  >
+  <a href="https://www.vecteezy.com/free-vector/windmill">Windmill Vectors by Vecteezy</a>
   and
-  <a href="https://www.vecteezy.com/free-vector/train-landscape"
-  >Train Landscape Vectors by Vecteezy</a
-  >
+  <a href="https://www.vecteezy.com/free-vector/train-landscape">Train Landscape Vectors by Vecteezy</a>
 </div>
-

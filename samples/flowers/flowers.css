@@ -15,7 +15,7 @@ div.flex-container {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  background-color: #E8C309;
+  background-color: #e8c309;
   z-index: -1;
   position: absolute;
 }
