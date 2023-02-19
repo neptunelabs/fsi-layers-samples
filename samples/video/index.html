@@ -1,20 +1,21 @@
 <div class="container position-relative ratio ratio-16x9">
   <video
-    autoplay="autoplay"
-    loop="loop"
-    muted="muted"
-    poster="https://fsi-site-origin.neptunelabs.com/fsi/static/video/forest-4k.mp4/poster.01.jpg"
+    autoplay
+    loop
+    muted
+    playsinline
+    poster="{{{fsi.server}}}/{{{fsi.context}}}/static/{{{sources.statics}}}/video/forest-4k.mp4/poster.jpg"
   >
     <source
-      src="https://fsi-site-origin.neptunelabs.com/fsi/static/video/forest-4k.mp4/av1.1.mp4"
-      type='video/mp4; codecs="av01.0.04M.08"'
+      src="{{{fsi.server}}}/{{{fsi.context}}}/static/{{{sources.statics}}}/video/forest-4k.mp4/av1.1.mp4"
+      type='video/mp4; codecs="av01.0.05M.08.0.110.01.01.01.1"'
     />
     <source
-      src="https://fsi-site-origin.neptunelabs.com/fsi/static/video/forest-4k.mp4/h265.1.mp4"
-      type='video/mp4; codecs="hev1.1.6.L93.B0"'
+      src="{{{fsi.server}}}/{{{fsi.context}}}/static/{{{sources.statics}}}/video/forest-4k.mp4/h265.1.mp4"
+      type='video/mp4; codecs="hvc1"'
     />
     <source
-      src="https://fsi-site-origin.neptunelabs.com/fsi/static/video/forest-4k.mp4/h264.1.mp4"
+      src="{{{fsi.server}}}/{{{fsi.context}}}/static/{{{sources.statics}}}/video/forest-4k.mp4/h264.1.mp4"
       type='video/mp4; codecs="avc1.42E01E"'
     />
     Your browser does not support the video tag.
@@ -46,7 +47,6 @@
     <h5 class="card-header">Featured</h5>
     <div class="card-body">
       <h5 class="card-title">Hiking equipment</h5>
-      <div class="card-text">
         Including
         <ul>
           <li>Walking backpack</li>
@@ -56,8 +56,9 @@
           <li>Rain cover</li>
           <li>Walking socks</li>
         </ul>
-      </div>
     </div>
-    <div class="card-footer"><a class="btn btn-primary" href="#">Buy now</a></div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item text-center"><a class="btn btn-primary" href="#">Buy now</a></li>
+    </ul>
   </div>
 </div>
