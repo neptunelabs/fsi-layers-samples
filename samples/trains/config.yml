@@ -6,7 +6,7 @@ overview:
     - Object movement
     - Object rotation
     - Reference Sizing
-  order: 2
+  order: 5
 sample:
   template:
     schema: framework-2023

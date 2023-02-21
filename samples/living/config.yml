@@ -1,12 +1,12 @@
 overview:
-  title: Product Video
+  title: Living Layer
   image: logo.png
-  description: Multiple images are rendered and moved as parallax.
+  description: Background Video with dynamic resolution image in front
   facts:
-    - Object movement
-    - Object rotation
+    - HTML Video Layer
+    - No custom JS
     - Reference Sizing
-  order: 5
+  order: 2
 sample:
   template:
     schema: framework-2023
