@@ -18,6 +18,8 @@ sample:
             link: https://www.neptunelabs.com/fsi-layers/
       fsi:
         layers: true
+      bootstrap:
+        icons: true
   mapping:
     html: 'index.html'
     js: 'kitchen.js'

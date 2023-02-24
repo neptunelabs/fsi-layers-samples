@@ -17,7 +17,7 @@
     </button>
   </div>
 </div>
-<div class="container-fluid overflow-hidden container-max-server">
+<div class="container" style='height:900px'>
   <div class="row h-100">
     <div class="col h-100">
       <fsi-layers
@@ -91,6 +91,26 @@
             src="{{{sources.images}}}/kitchen/Seating-Group.tif"
             hidden="true"
           ></fsi-layer>
+        </fsi-layer-group>
+        <fsi-layer-group
+          name="handler"
+          left="0"
+          top="0"
+          width="100%"
+          height="100%"
+          refWidth="3840"
+          refHeight="2400"
+          refMode="fill"
+        >
+          <fsi-layer
+            name="sun"
+            left="100"
+            top="200"
+            width="100%"
+            height="100%"
+          >
+            <p>Hallo</p>
+          </fsi-layer>
         </fsi-layer-group>
       </fsi-layers>
     </div>
