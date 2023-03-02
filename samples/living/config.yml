@@ -1,7 +1,7 @@
 overview:
   title: Living Layer
   image: logo.png
-  description: Background Video with dynamic resolution image in front
+  description: Background Video with dynamic resolution image in front.
   facts:
     - HTML Video Layer
     - No custom JS
