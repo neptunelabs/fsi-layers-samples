@@ -21,6 +21,8 @@ all demos in JSFiddle.
 
 [Flowers in JSFiddle][flowjsf]
 
+[Living Layer in JSFiddle][livingjsf]
+
 [Trains in JSFiddle][trainsjsf]
 
 [Kitchen in JSFiddle][kitchenjsf]
@@ -31,6 +33,7 @@ all demos in JSFiddle.
 [kitchenjsf]: https://jsfiddle.net/gh/get/library/pure/neptunelabs/fsi-jsfiddle-samples/tree/master/fsi-layers-samples/kitchen
 [pdpjsf]: https://jsfiddle.net/gh/get/library/pure/neptunelabs/fsi-jsfiddle-samples/tree/master/fsi-layers-samples/pdp
 [trainsjsf]: https://jsfiddle.net/gh/get/library/pure/neptunelabs/fsi-jsfiddle-samples/tree/master/fsi-layers-samples/trains
+[livingjsf]: https://jsfiddle.net/gh/get/library/pure/neptunelabs/fsi-jsfiddle-samples/tree/master/fsi-layers-samples/living
 
 ## Start and develop
 
