@@ -1,15 +1,21 @@
-title: Trains
-image: logo.png
-description: Multiple images are rendered and moved as parallax.
-facts:
-  - Object movement
-  - Object rotation
-  - Reference Sizing
-priority: 2
-jsfiddle:
+overview:
+  title: Trains
+  image: logo.png
+  description: Multiple images are rendered and moved as parallax.
+  facts:
+    - Object movement
+    - Object rotation
+    - Reference Sizing
+  order: 5
+sample:
+  template:
+    schema: framework-2023
+    components:
+      fsi:
+        layers: true
   mapping:
     html: "index.html"
     js: "trains.js"
     css: "trains.css"
-  resources:
-    - "{{{fsi.server}}}/{{{fsi.context}}}/{{{fsi.viewer}}}/applications/layers/js/fsilayers.js"
+jsfiddle:
+  deploy: true

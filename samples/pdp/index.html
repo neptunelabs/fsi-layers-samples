@@ -1,17 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8"/>
-  <title>Product Detail Page - FSI Layers Demo</title>
-  <meta name="author" content="NeptuneLabs">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@{{dependencies.bootstrap}}/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@{{dependencies.bootstrapIcons}}/font/bootstrap-icons.css">
-  <link rel="stylesheet" type="text/css" href="pdp.css">
-  <script src='{{{fsi.server}}}/{{{fsi.context}}}/{{{fsi.viewer}}}/applications/layers/js/fsilayers.js'></script>
-  <script src="pdp.js"></script>
-</head>
-<body>
 <div class="container">
   <div class="row bg-white p-4 mt-4">
     <div class="col-md-6 col-sm-12 col-xs-12 sticky-top px-0" id="fsiLayersContainer"></div>
@@ -23,17 +9,15 @@
         <span class="yellow-txt" id="productStars"></span>
         <small>(<span id="productRatings"></span>) Ratings</small>
       </p>
-      <hr/>
+      <hr />
       <div class="row align-items-center">
         <div class="col">
           <h3>$ <span id="priceTotal"></span></h3>
           <small>*includes tax (excl. shipping)</small>
         </div>
         <div class="col text-end">
-          <button type="button" class="btn btn-lg text-dark yellow-bg" id="cardBtn">
-            Add to Cart
-          </button>
-          <br/>
+          <button type="button" class="btn btn-lg text-dark yellow-bg" id="cardBtn">Add to Cart</button>
+          <br />
         </div>
       </div>
       <div class="row align-items-center">
@@ -44,9 +28,9 @@
           </div>
         </div>
       </div>
-      <hr/>
+      <hr />
       <div id="layerSwitches"></div>
-      <hr/>
+      <hr />
       <div class="card-group w-75">
         <div class="card">
           <div class="card-body">
@@ -61,7 +45,7 @@
           </div>
         </div>
       </div>
-      <hr/>
+      <hr />
       <div>
         <p class="lead">Product Description</p>
         <p id="productDescHead"></p>
@@ -72,11 +56,7 @@
 </div>
 <div class="container small">
   <p>
-    * within our factory, outside the delivery time can be delayed by up to
-    90 days<br/>
+    * within our factory, outside the delivery time can be delayed by up to 90 days<br />
     ** all dimensions, colors and functions can vary
   </p>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@{{dependencies.bootstrap}}/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-</body>
-</html>

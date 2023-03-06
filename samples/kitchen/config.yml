@@ -1,17 +1,28 @@
-title: Kitchen Configurator
-image: logo.png
-description: Simple Room Configurator with 6 Layers.
-facts:
-  - Object movement
-  - Object colorization
-  - Object visibility
-priority: 3
-jsfiddle:
+overview:
+  title: Kitchen Configurator
+  image: logo.png
+  description: Simple Room Configurator with 6 Layers.
+  facts:
+    - Object movement
+    - Object colorization
+    - Object visibility
+  order: 3
+sample:
+  template:
+    schema: framework-2023
+    components:
+      menu:
+        template: data/furniture-menu.yml
+      footer:
+          viewer:
+            link: https://www.neptunelabs.com/fsi-layers/
+      fsi:
+        layers: true
+      bootstrap:
+        icons: true
   mapping:
-    html: "index.html"
-    js: "kitchen.js"
-    css: "kitchen.css"
-  resources:
-    - https://cdn.jsdelivr.net/npm/bootstrap@{{dependencies.bootstrap}}/dist/css/bootstrap.min.css
-    - https://cdn.jsdelivr.net/npm/bootstrap@{{dependencies.bootstrap}}/dist/js/bootstrap.bundle.min.js
-    - "{{{fsi.server}}}/{{{fsi.context}}}/{{{fsi.viewer}}}/applications/layers/js/fsilayers.js"
+    html: 'index.html'
+    js: 'kitchen.js'
+    css: 'kitchen.scss'
+jsfiddle:
+  deploy: true

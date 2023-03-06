@@ -1,18 +1,28 @@
-title: Product Detail Page
-image: logo.png
-description: PDP with Layers build from JSON.
-facts:
-  - JS built FSI Layers
-  - Object visibility
-  - 575 combinations
-priority: 4
-jsfiddle:
+overview:
+  title: Product Detail Page
+  image: logo.png
+  description: PDP with Layers build from JSON.
+  facts:
+    - JS built FSI Layers
+    - Object visibility
+    - 575 combinations
+  order: 4
+sample:
+  template:
+    schema: framework-2023
+    components:
+      menu:
+        template: data/misc-menu.yml
+      footer:
+        viewer:
+          link: https://www.neptunelabs.com/fsi-layers/
+      fsi:
+        layers: true
+      bootstrap:
+        icons: true
   mapping:
     html: "index.html"
     js: "pdp.js"
     css: "pdp.css"
-  resources:
-    - https://cdn.jsdelivr.net/npm/bootstrap@{{dependencies.bootstrap}}/dist/css/bootstrap.min.css
-    - https://cdn.jsdelivr.net/npm/bootstrap@{{dependencies.bootstrap}}/dist/js/bootstrap.bundle.min.js
-    - https://cdn.jsdelivr.net/npm/bootstrap-icons@{{dependencies.bootstrapIcons}}/font/bootstrap-icons.css
-    - "{{{fsi.server}}}/{{{fsi.context}}}/{{{fsi.viewer}}}/applications/layers/js/fsilayers.js"
+jsfiddle:
+  deploy: true

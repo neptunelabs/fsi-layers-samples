@@ -1,13 +1,6 @@
-body,
-html {
+.container-t {
   width: 100%;
-  height: 100%;
-  margin: auto;
-  font-family: sans-serif;
-}
-
-.container {
-  width: 100%;
+  max-width: 3268px;
   height: 100%;
   overflow: hidden;
   display: flex;
@@ -15,10 +8,6 @@ html {
   flex-wrap: nowrap;
   margin-left: auto;
   margin-right: auto;
-}
-
-.container-max-server {
-  max-width: 3268px;
 }
 
 fsi-layers {
@@ -35,6 +24,6 @@ fsi-layers {
   background-color: white;
   opacity: 0.5;
   border: solid 1px gray;
-  border-radius: 2em;
+  border-radius: 1em;
   padding: 1pt;
 }

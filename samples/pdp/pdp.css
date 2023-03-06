@@ -1,14 +1,6 @@
-body {
-  overflow-x: hidden;
-  width: 100vw;
-  margin-right: calc(100vw - 100%);
-  background-color: #eeeeee;
-  color: slategrey;
-  font-size: 0.9rem;
-}
-
 #fsiLayersContainer {
   height: 500px;
+  top: 80px;
 }
 
 .progress-bar {
