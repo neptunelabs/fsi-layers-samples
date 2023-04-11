@@ -4,7 +4,7 @@ This demo shows a simple animation example based on *FSI Layers*.
 
 ### Description
 
-The animation is handled by trains.js:
+The animation is handled by script.js:
 This is initialised by *FSI-Layers* with the callback ``onReady``.
 
 ```javascript

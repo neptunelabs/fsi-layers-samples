@@ -15,7 +15,7 @@ sample:
         layers: true
   mapping:
     html: "index.html"
-    js: "trains.js"
-    css: "trains.css"
+    js: "script.js"
+    css: "style.css"
 jsfiddle:
   deploy: true

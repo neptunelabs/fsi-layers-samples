@@ -1,5 +1,5 @@
 overview:
-  title: Product Detail Page
+  title: Product Detail Page (PDP)
   image: logo.png
   description: PDP with Layers build from JSON.
   facts:
@@ -22,7 +22,7 @@ sample:
         icons: true
   mapping:
     html: "index.html"
-    js: "pdp.js"
-    css: "pdp.css"
+    js: "script.js"
+    css: "style.css"
 jsfiddle:
   deploy: true

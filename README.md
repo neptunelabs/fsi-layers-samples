@@ -25,7 +25,7 @@ all demos in JSFiddle.
 
 [Trains in JSFiddle][trainsjsf]
 
-[Kitchen in JSFiddle][kitchenjsf]
+[Script in JSFiddle][kitchenjsf]
 
 [Product Detail Page in JSFiddle][pdpjsf]
 

@@ -30,7 +30,7 @@ sample:
         icons: true
   mapping:
     html: "index.html"
-    js: "video.js"
-    css: "video.css"
+    js: "script.js"
+    css: "style.css"
 jsfiddle:
   deploy: true
