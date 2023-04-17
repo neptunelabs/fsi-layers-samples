@@ -1,4 +1,4 @@
-# Kitchen - FSI Layers Configurator Example
+# Script - FSI Layers Configurator Example
 
 This demo shows a simple configurator based on *FSI Layers*.
 
@@ -10,7 +10,7 @@ All elements in the index.html file below the ```<fsi-layers>`` tag are for the 
 
 The template ``{{sources.images}}}`` in the src attribute is replaced by Grunt with the variables written in the env.yml project file.
 
-In the Kitchen JavaScript class, only the ``cfgChange`` method is relevant.
+In the Script JavaScript class, only the ``cfgChange`` method is relevant.
 This class is initialised by *FSI-Layers* with the callback ``onReady``. The FSI-Layers element is saved as a class property and the side menu is initialised.
 
 The ``cfgChange`` method reacts to the element ID of the called element. Depending on this, a new property value is passed to an assigned layer.
@@ -37,11 +37,11 @@ Two scenes were rendered for this purpose.
 
 One without equipment:
 
-![Kitchen Empty](img/kitchen_empty.jpg)
+![Script Empty](img/kitchen_empty.jpg)
 
 And a scene with everything that should be addable.
 
-![Kitchen Full](img/kitchen_full.jpg)
+![Script Full](img/kitchen_full.jpg)
 
 Alpha channels have been automatically created for certain objects.
 This makes it easy to select and crop individual objects in an image editing program such as

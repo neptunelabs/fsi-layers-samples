@@ -43,7 +43,7 @@ Example big flower:
 
 ## Movement
 
-The embedded **flowers.js** script handles the animation.
+The embedded **script.js** script handles the animation.
 
 First the fsi-layers instance is returned with *getElementById*.
 

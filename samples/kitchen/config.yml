@@ -22,7 +22,7 @@ sample:
         icons: true
   mapping:
     html: 'index.html'
-    js: 'kitchen.js'
-    css: 'kitchen.scss'
+    js: 'script.js'
+    css: 'style.scss'
 jsfiddle:
   deploy: true

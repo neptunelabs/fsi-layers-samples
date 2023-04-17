@@ -15,7 +15,7 @@ sample:
         layers: true
   mapping:
     html: "index.html"
-    js: "flowers.js"
-    css: "flowers.css"
+    js: "script.js"
+    css: "style.css"
 jsfiddle:
   deploy: true
