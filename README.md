@@ -23,8 +23,6 @@ all demos in JSFiddle.
 
 [Living Layer in JSFiddle][livingjsf]
 
-[Trains in JSFiddle][trainsjsf]
-
 [Script in JSFiddle][kitchenjsf]
 
 [Product Detail Page in JSFiddle][pdpjsf]
@@ -32,7 +30,6 @@ all demos in JSFiddle.
 [flowjsf]: https://jsfiddle.net/gh/get/library/pure/neptunelabs/fsi-jsfiddle-samples/tree/master/fsi-layers-samples/flowers
 [kitchenjsf]: https://jsfiddle.net/gh/get/library/pure/neptunelabs/fsi-jsfiddle-samples/tree/master/fsi-layers-samples/kitchen
 [pdpjsf]: https://jsfiddle.net/gh/get/library/pure/neptunelabs/fsi-jsfiddle-samples/tree/master/fsi-layers-samples/pdp
-[trainsjsf]: https://jsfiddle.net/gh/get/library/pure/neptunelabs/fsi-jsfiddle-samples/tree/master/fsi-layers-samples/trains
 [livingjsf]: https://jsfiddle.net/gh/get/library/pure/neptunelabs/fsi-jsfiddle-samples/tree/master/fsi-layers-samples/living
 
 ## Start and develop
