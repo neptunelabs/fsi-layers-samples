@@ -3,6 +3,10 @@
  */
 function initKitchen() {
   new Kitchen()
+  $(".modal-dialog").draggable({
+    cursor: "move",
+    handle: ".modal-header",
+  });
 }
 
 /*
@@ -21,17 +25,6 @@ class Kitchen {
   constructor() {
     this.toasterHSL = [358, 85, 20]
     this.fsiLayersEl = document.getElementById('kitchen')
-
-    // Hide/Show Configuration Menu
-    const offCanvasEl = document.getElementById('offcanvasRight')
-    offCanvasEl.addEventListener('hidden.bs.offcanvas', function () {
-      const btnEl = document.getElementById('btnConfigurator')
-      btnEl.classList.remove('invisible')
-    })
-    offCanvasEl.addEventListener('shown.bs.offcanvas', function () {
-      const btnEl = document.getElementById('btnConfigurator')
-      btnEl.classList.add('invisible')
-    })
 
     this.addInputEvents()
   }

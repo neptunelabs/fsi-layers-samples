@@ -20,9 +20,11 @@ sample:
         layers: true
       bootstrap:
         icons: true
+      jquery:
+        ui: true
   mapping:
     html: 'index.html'
     js: 'script.js'
-    css: 'style.scss'
-jsfiddle:
+    css: 'style.css'
+playground:
   deploy: true

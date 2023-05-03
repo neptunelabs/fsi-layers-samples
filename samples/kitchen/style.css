@@ -1,0 +1,84 @@
+:root {
+  --bs-backdrop-opacity: 0.2 !important;
+  --bs-backdrop-bg: red !important;
+}
+
+.modal-backdrop.show {
+  opacity: 0;
+}
+
+.fill {
+  min-height: 100%;
+  height: 100%;
+  padding: 0;
+}
+.semi-trans {
+  opacity: 0.8;
+}
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+  .modal-trans {
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(5px) brightness(1);
+    -webkit-backdrop-filter: blur(5px) brightness(1);
+  }
+}
+
+.offcanvas-small {
+  width: 300px;
+  background-color: #f0f0f8;
+}
+.cfg-spinner {
+  width: 5rem;
+  height: 5rem;
+}
+.container-max-server {
+  max-width: 3840px;
+}
+.top-config {
+  top: 6.5% !important;
+}
+.custom-radios div {
+  display: inline-block;
+}
+.custom-radios input[type='radio'] {
+  display: none;
+}
+.custom-radios input[type='radio'] + label {
+  font-family: sans-serif;
+  font-size: 17px;
+}
+.custom-radios input[type='radio'] + label span {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin: -1px 4px 0 0;
+  vertical-align: middle;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  line-height: 44px;
+}
+.custom-radios input[type='radio'] + label span i {
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.custom-radios input[type='radio']#checkChillColor1 + label span {
+  color: #666;
+  background-color: #eee;
+}
+.custom-radios input[type='radio']#checkChillColor2 + label span {
+  background-color: #84b8db;
+}
+.custom-radios input[type='radio']#checkChillColor3 + label span {
+  background-color: #84db9a;
+}
+.custom-radios input[type='radio']#checkChillColor4 + label span {
+  background-color: #dbd884;
+}
+.custom-radios input[type='radio']:checked + label span i {
+  opacity: 1;
+}

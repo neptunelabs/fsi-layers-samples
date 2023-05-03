@@ -13,7 +13,6 @@ class Animation {
   }
 
   moveLayers() {
-
     this.rafCallID = requestAnimationFrame(() => this.moveLayers())
 
     let nowTime = Date.now()

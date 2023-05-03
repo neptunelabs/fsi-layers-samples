@@ -2,4 +2,5 @@
 title: 'FSI Layers'
 projectURL: https://www.neptunelabs.com/fsi-layers/
 originAssetPath: layers
-jsFiddleBase: fsi-layers-samples
+playground:
+  stackblitz: fsi-layers-samples
