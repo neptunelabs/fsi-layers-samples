@@ -75,7 +75,7 @@ For further information on the FSI Viewer and FSI Server,
 please refer to the official [documentation][Docs].
 
 
-[Docs]: https://docs.neptunelabs.com/fsi-viewer/latest/fsi-layers
+[Docs]: https://docs.neptunelabs.com/docs/fsi-layers
 
 [Server]: https://www.neptunelabs.com/get/
 
