@@ -11,7 +11,7 @@ sample:
     schema: framework-2023
     components:
       menu:
-        template: data/furniture-menu.yml
+        template: data/misc-menu.yml
       highlight: DEAL OF THE DAY
       footer:
         credits:
