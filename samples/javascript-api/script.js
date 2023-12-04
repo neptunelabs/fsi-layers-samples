@@ -48,6 +48,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function changeArt(buttonID) {
   let el1 = document.getElementById('art-1');
+  const name = document.getElementById('myLayers').getChildNameAt('container', 2)
+  console.log(name)
   switch (buttonID) {
     case "1-1":
       if (el1 != null) {
