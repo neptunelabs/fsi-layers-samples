@@ -15,7 +15,16 @@
   background-color: #33b1aa;
 }
 
-
+.btnLayers {
+  background-color: #33b1aa;
+  color: white;
+  padding: 6px;
+  border:1px solid #33b1aa;
+  margin-left: 5px;
+  font-size: 14px;
+  outline: none;
+  border-radius: var(--bs-border-radius);
+}
 
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
@@ -49,11 +58,7 @@
 }
 
 .layersContainer {
-  position: relative;
-  height: 667px;
-  width: 1200px;
   padding: 0px;
-  margin: 0px;
 }
 
 .layersContainer .img {
@@ -62,7 +67,11 @@
 }
 
 .layersContainer .myLayers{
+  position: relative;
+}
+
+.layersContainer .btn {
+  z-index: 15;
   position: absolute;
-  visibility: hidden;
 }
 

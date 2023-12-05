@@ -1,4 +1,8 @@
 <div class="container">
+  <div class="row p-3 mx-auto layersContainer">
+   <div class="myLayers" id="layersEle">
+        </div>
+    </div>
   <div class="row row-cols-1 row-cols-lg-2 g-3 py-3 px-5">
     <div class="col productContainer" id="productContainer">
       <img id="image" src="{{&fsi.server}}/{{&fsi.context}}/server?type=image&source=images/samples/layers/gallery/boho-art-6654957_1920.jpg&width=400" width="400" alt="">
@@ -79,133 +83,8 @@
             />
           </div>
         </div>
-        <div class="btn-group py-3">
-          <a href="#layersImg" id="layersBtn" type="button" class="btn btn-lg btn-outline-dark fsi-code">Create your gallery</a>
-        </div>
       </div>
     </div>
   </div>
-  <div class="row p-3">
-    <div class="col-lg-11 pl-5">
-      <div class="layersContainer">
-    <img id="layersImg" src="{{&fsi.server}}/{{&fsi.context}}/server?type=image&source=images/samples/layers/gallery/inneneinrichtung-mit-fotorahmen.jpg&width=1000" width="1000" alt="">
-        <div class="myLayers" id="layersEle">
-        </div>
-        </div>
-    </div>
-    <div class="col-lg-1 my-auto">
-      <div class="row row-cols-6 row-cols-lg-1">
-        <div class="col p-1" id="img1">
-          <img
-            alt=""
-            class="thumbnail img-fluid cursor-pointer"
-            height="100"
-            src="{{&fsi.server}}/{{&fsi.context}}/server?type=image&source=images/samples/layers/gallery/boho-art-6654957_1920.jpg&height=100"
-          />
-          <div class="dropdown">
-            <button class="btndropd">
-              <i class="bi bi-caret-down-fill"></i>
-            </button>
-            <div class="dropdown-content">
-              <a id="1-1" onclick="changeArt('1-1')">Add to left</a>
-              <a id="1-2" onclick="changeArt('1-2')">Add to center</a>
-              <a id="1-3" onclick="changeArt('1-3')">Add to right</a>
-            </div>
-          </div>
-        </div>
-        <div class="col p-1" id="img2">
-          <img
-            alt=""
-            class="thumbnail img-fluid cursor-pointer"
-            height="100"
-            src="{{&fsi.server}}/{{&fsi.context}}/server?type=image&source=images/samples/layers/gallery/sign-post-5655110_1920.png&height=100"
-          />
-          <div class="dropdown">
-            <button class="btndropd">
-              <i class="bi bi-caret-down-fill"></i>
-            </button>
-            <div class="dropdown-content">
-              <a id="2-1" onclick="changeArt('2-1')">Add to left</a>
-              <a id="2-2" onclick="changeArt('2-2')">Add to center</a>
-              <a id="2-3" onclick="changeArt('2-3')">Add to right</a>
-            </div>
-          </div>
-        </div>
-        <div class="col p-1" id="img3">
-          <img
-            alt=""
-            class="thumbnail img-fluid cursor-pointer"
-            height="100"
-            src="{{&fsi.server}}/{{&fsi.context}}/server?type=image&source=images/samples/layers/gallery/abstract-art-7093399_1920.jpg&height=100"
-          />
-          <div class="dropdown">
-            <button class="btndropd">
-              <i class="bi bi-caret-down-fill"></i>
-            </button>
-            <div class="dropdown-content">
-              <a id="3-1" onclick="changeArt('3-1')">Add to left</a>
-              <a id="3-2" onclick="changeArt('3-2')">Add to center</a>
-              <a id="3-3" onclick="changeArt('3-3')">Add to right</a>
-            </div>
-          </div>
-        </div>
-        <div class="col p-1" id="img4">
-          <img
-            alt=""
-            class="thumbnail img-fluid cursor-pointer"
-            height="100"
-            src="{{&fsi.server}}/{{&fsi.context}}/server?type=image&source=images/samples/layers/gallery/cat-8185712_1920.jpg&height=100"
-          />
-          <div class="dropdown">
-            <button class="btndropd">
-              <i class="bi bi-caret-down-fill"></i>
-            </button>
-            <div class="dropdown-content">
-              <a id="4-1" onclick="changeArt('4-1')">Add to left</a>
-              <a id="4-2" onclick="changeArt('4-2')">Add to center</a>
-              <a id="4-3" onclick="changeArt('4-3')">Add to right</a>
-            </div>
-          </div>
-        </div>
-        <div class="col p-1" id="img5">
-          <img
-            alt=""
-            class="thumbnail img-fluid cursor-pointer"
-            height="100"
-            src="{{&fsi.server}}/{{&fsi.context}}/server?type=image&source=images/samples/layers/gallery/painting-6556384_1920.jpg&height=100"
-          />
-          <div class="dropdown">
-            <button class="btndropd">
-              <i class="bi bi-caret-down-fill"></i>
-            </button>
-            <div class="dropdown-content">
-              <a id="5-1" onclick="changeArt('5-1')">Add to left</a>
-              <a id="5-2" onclick="changeArt('5-2')">Add to center</a>
-              <a id="5-3" onclick="changeArt('5-3')">Add to right</a>
-            </div>
-          </div>
-        </div>
-        <div class="col p-1" id="img6">
-
-          <img
-            alt=""
-            class="thumbnail img-fluid cursor-pointer"
-            height="100"
-            src="{{&fsi.server}}/{{&fsi.context}}/server?type=image&source=images/samples/layers/gallery/abstract-rainbow-6296890_1920.jpg&height=100"
-          />
-          <div class="dropdown">
-            <button class="btndropd">
-              <i class="bi bi-caret-down-fill"></i>
-            </button>
-            <div class="dropdown-content">
-              <a id="6-1" onclick="changeArt('6-1')">Add to left</a>
-              <a id="6-2" onclick="changeArt('6-2')">Add to center</a>
-              <a id="6-3" onclick="changeArt('6-3')">Add to right</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    </div>
 </div>
 
