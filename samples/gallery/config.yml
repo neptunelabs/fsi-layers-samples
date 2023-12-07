@@ -1,7 +1,7 @@
 overview:
-  title: JavaScript API
+  title: Image Gallery
   image: logo.png
-  description: Learn how to use the JavaScript Layers API with a simple demo.
+  description: Learn how to use methods and callbacks with a simple image gallery demo.
   facts:
     - Gallery configurator
     - With methods and callbacks
