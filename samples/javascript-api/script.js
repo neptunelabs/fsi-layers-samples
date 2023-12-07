@@ -22,9 +22,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const show = () => {
     console.log('show should happen now?')
     // show FSI Viewer instance and hide image
-    instance.addLayer("container", {"name":"art-1", "id":"art-1", "src":imageList[0], "left":"23.2%","bottom":"60.5%","width":"22%", "height":"22%", "opactiy" :"0.9"});
-    instance.addLayer("container", {"name":"art-2", "id":"art-2", "src":imageList[3], "right":"41.4%","bottom":"50.2%","width":"29%", "height":"29%", "opactiy" :"0.9"});
-    instance.addLayer("container", {"name":"art-3", "id":"art-3", "src":imageList[4 ], "right":"19.5%","bottom":"60.4%","width":"23%", "height":"23%", "opactiy" :"0.9"});
+    instance.addLayer("container", {"name": 1, "id":"art-1", "src":imageList[0], "left":"23.2%","bottom":"60.5%","width":"22%", "height":"22%", "opactiy" :"0.9"});
+    instance.addLayer("container", {"name": 2, "id":"art-2", "src":imageList[3], "right":"41.4%","bottom":"50.2%","width":"29%", "height":"29%", "opactiy" :"0.9"});
+    instance.addLayer("container", {"name": 3, "id":"art-3", "src":imageList[4 ], "right":"19.5%","bottom":"60.4%","width":"23%", "height":"23%", "opactiy" :"0.9"});
   }
 
   const instance =  $FSI.createNode("fsi-layers", {
@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
       height:"23%"
     }
   );
-  layersButton1.innerHTML = "<button class=\"btnLayers\"  id=\"button-1\" onclick=\"changeArt('1-1')\">\n" +
+  layersButton1.innerHTML = "<button class=\"btnLayers\"  id=\"button-1\" onclick=\"changeArt(1)\">\n" +
     "              <i class=\"bi bi-caret-down-fill\"></i>\n" +
     "            </button>";
 
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
       height:"23%"
     }
   );
-  layersButton2.innerHTML = "<button class=\"btnLayers\"  id=\"button-2\" onclick=\"changeArt('1-2')\">\n" +
+  layersButton2.innerHTML = "<button class=\"btnLayers\"  id=\"button-2\" onclick=\"changeArt(2)\">\n" +
     "              <i class=\"bi bi-caret-down-fill\"></i>\n" +
     "            </button>";
 
@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
       height:"23%"
     }
   );
-  layersButton3.innerHTML = "<button class=\"btnLayers\"  id=\"button-3\" onclick=\"changeArt('1-3')\">\n" +
+  layersButton3.innerHTML = "<button class=\"btnLayers\"  id=\"button-3\" onclick=\"changeArt(3)\">\n" +
     "              <i class=\"bi bi-caret-down-fill\"></i>\n" +
     "            </button>";
 
@@ -109,36 +109,19 @@ document.addEventListener('DOMContentLoaded', () => {
 function changeArt(buttonID) {
   let imageSrc
   const instance = document.getElementById('myLayers');
-  switch (buttonID) {
-    case "1-1":
-      imgCounter++;
-      if(imgCounter >= imageList.length) {
-        imgCounter = 0;
-      }
-      imageSrc = imageList[imgCounter];
-      console.log('button 1, something happens!',imageSrc, imgCounter)
-      instance.setProperties("art-1", {"src":imageSrc});
-      instance.render();
-      break
-    case "1-2":
-      imgCounter++;
-      if(imgCounter >= imageList.length) {
-        imgCounter = 0;
-      }
-      imageSrc = imageList[imgCounter];
-      console.log('button 2, something happens!',imageSrc, imgCounter)
-      instance.setProperties("art-2", {"src":imageSrc});
-      instance.render();
-      break
-    case "1-3":
-      imgCounter++;
-      if(imgCounter >= imageList.length) {
-        imgCounter = 0;
-      }
-      imageSrc = imageList[imgCounter];
-      console.log('button 3, something happens!',imageSrc, imgCounter)
-      instance.setProperties("art-3", {"src":imageSrc});
-      instance.render();
-      break
+  if (buttonID > 0 && buttonID < 4)
+  {
+    imgCounter++;
+    if(imgCounter >= imageList.length) {
+      imgCounter = 0;
+    }
+    imageSrc = imageList[imgCounter];
+    console.log('button', buttonID)
+    instance.setProperties(buttonID, {"src":imageSrc});
+    instance.render();
+  }
+  else
+  {
+    console.log('Button does not exist?')
   }
 }
