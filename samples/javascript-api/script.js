@@ -116,12 +116,7 @@ function changeArt(buttonID) {
       imgCounter = 0;
     }
     imageSrc = imageList[imgCounter];
-    console.log('button', buttonID)
     instance.setProperties(buttonID, {"src":imageSrc});
     instance.render();
-  }
-  else
-  {
-    console.log('Button does not exist?')
   }
 }
