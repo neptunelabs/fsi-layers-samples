@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const show = () => {
     console.log('show should happen now?')
-    // show FSI Viewer instance and hide image
+    // add art Layers
     instance.addLayer("container", {"name": 1, "id":"art-1", "src":imageList[0], "left":"23.2%","bottom":"60.5%","width":"22%", "height":"22%", "opactiy" :"0.9"});
     instance.addLayer("container", {"name": 2, "id":"art-2", "src":imageList[3], "right":"41.4%","bottom":"50.2%","width":"29%", "height":"29%", "opactiy" :"0.9"});
     instance.addLayer("container", {"name": 3, "id":"art-3", "src":imageList[4 ], "right":"19.5%","bottom":"60.4%","width":"23%", "height":"23%", "opactiy" :"0.9"});
@@ -56,6 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
   );
   layersContainer.appendChild(layersBack);
 
+  // add buttons
   const layersButtonContainer = $FSI.createNode("fsi-layer-group", {
     name: "buttons",
     width: '100%',
@@ -106,6 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
   layersButtonContainer.appendChild(layersButton3);
 })
 
+//change images on click
 function changeArt(buttonID) {
   let imageSrc
   const instance = document.getElementById('myLayers');
