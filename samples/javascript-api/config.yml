@@ -12,7 +12,7 @@ sample:
     components:
       menu:
         template: data/misc-menu.yml
-      highlight: DEAL OF THE DAY
+      highlight: CREATE YOUR OWN IMAGE GALLERY
       footer:
         credits:
           photos:

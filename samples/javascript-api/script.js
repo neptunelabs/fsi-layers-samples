@@ -1,23 +1,39 @@
+imgCounter = 0;
+const imageList = [
+  "images/samples/layers/gallery/art-0.jpg",
+  "images/samples/layers/gallery/art-2.jpg",
+  "images/samples/layers/gallery/art-3.jpg",
+  "images/samples/layers/gallery/art-4.jpg",
+  "images/samples/layers/gallery/art-5.jpg",
+  "images/samples/layers/gallery/art-6.jpg",
+  "images/samples/layers/gallery/art-7.jpg",
+  "images/samples/layers/gallery/art-8.jpg",
+  "images/samples/layers/gallery/art-1.jpg",
+  "images/samples/layers/gallery/art-9.jpg",
+  "images/samples/layers/gallery/art-10.jpg",
+  "images/samples/layers/gallery/art-11.jpg",
+  "images/samples/layers/gallery/art-12.jpg",
+]
+
 document.addEventListener('DOMContentLoaded', () => {
-  imgCounter = 0;
-  const imageList = ["images/samples/layers/gallery/boho-art-6654957_1920.jpg", "images/samples/layers/gallery/sign-post-5655110_1920.png", "images/samples/layers/gallery/abstract-art-7093399_1920.jpg"]
-  const container = document.getElementById('layersEle');
+ const container = document.getElementById('layersEle');
   if (container.firstChild) return; // viewers already setup
 
   const show = () => {
     console.log('show should happen now?')
     // show FSI Viewer instance and hide image
-    instance.addLayer("container", {"name":"art-1", "id":"art-1", "src":"images/samples/layers/gallery/boho-art-6654957_1920.jpg", "left":"23%","bottom":"60%","width":"23%", "height":"23%", });
-    instance.addLayer("container", {"name":"art-2", "id":"art-2", "src":"images/samples/layers/gallery/abstract-art-7093399_1920.jpg", "right":"41.5%","bottom":"50%","width":"29%", "height":"29%", });
-    instance.addLayer("container", {"name":"art-3", "id":"art-3", "src":"images/samples/layers/gallery/abstract-rainbow-6296890_1920.jpg", "right":"19.5%","bottom":"61%","width":"22%", "height":"22%", });
+    instance.addLayer("container", {"name":"art-1", "id":"art-1", "src":imageList[0], "left":"23.2%","bottom":"60.5%","width":"22%", "height":"22%", "opactiy" :"0.9"});
+    instance.addLayer("container", {"name":"art-2", "id":"art-2", "src":imageList[3], "right":"41.4%","bottom":"50.2%","width":"29%", "height":"29%", "opactiy" :"0.9"});
+    instance.addLayer("container", {"name":"art-3", "id":"art-3", "src":imageList[4 ], "right":"19.5%","bottom":"60.4%","width":"23%", "height":"23%", "opactiy" :"0.9"});
   }
 
   const instance =  $FSI.createNode("fsi-layers", {
     id: "myLayers",
-    width: '1150px',
-    height: '767px',
+    width: '1264px',
+    height: '843px',
     skin: 'white',
     debug: true,
+    showInfo: false,
     onReady:show
   })
   container.appendChild(instance);
@@ -48,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
   layersRoot.appendChild(layersButtonContainer);
 
   const layersButton1 = $FSI.createNode("fsi-layer", {
-      name: "button",
+      name: "button1",
       left:"27.5%",
       bottom:"34%",
       width:"23%",
@@ -60,43 +76,69 @@ document.addEventListener('DOMContentLoaded', () => {
     "            </button>";
 
   layersButtonContainer.appendChild(layersButton1);
+
+  const layersButton2 = $FSI.createNode("fsi-layer", {
+      name: "button2",
+    right:"25%",
+    bottom:"18%",
+      width:"23%",
+      height:"23%"
+    }
+  );
+  layersButton2.innerHTML = "<button class=\"btnLayers\"  id=\"button-2\" onclick=\"changeArt('1-2')\">\n" +
+    "              <i class=\"bi bi-caret-down-fill\"></i>\n" +
+    "            </button>";
+
+  layersButtonContainer.appendChild(layersButton2);
+
+  const layersButton3 = $FSI.createNode("fsi-layer", {
+      name: "button3",
+      right:"2.5%",
+      bottom:"34%",
+      width:"23%",
+      height:"23%"
+    }
+  );
+  layersButton3.innerHTML = "<button class=\"btnLayers\"  id=\"button-3\" onclick=\"changeArt('1-3')\">\n" +
+    "              <i class=\"bi bi-caret-down-fill\"></i>\n" +
+    "            </button>";
+
+  layersButtonContainer.appendChild(layersButton3);
 })
 
 function changeArt(buttonID) {
+  let imageSrc
+  const instance = document.getElementById('myLayers');
   switch (buttonID) {
     case "1-1":
-      const instance = document.getElementById('myLayers');
-      console.log('button 1, something happens!')
-      instance.setProperties("art-1", {"src":"images/samples/layers/gallery/sign-post-5655110_1920.png"});
+      imgCounter++;
+      if(imgCounter >= imageList.length) {
+        imgCounter = 0;
+      }
+      imageSrc = imageList[imgCounter];
+      console.log('button 1, something happens!',imageSrc, imgCounter)
+      instance.setProperties("art-1", {"src":imageSrc});
+      instance.render();
+      break
+    case "1-2":
+      imgCounter++;
+      if(imgCounter >= imageList.length) {
+        imgCounter = 0;
+      }
+      imageSrc = imageList[imgCounter];
+      console.log('button 2, something happens!',imageSrc, imgCounter)
+      instance.setProperties("art-2", {"src":imageSrc});
+      instance.render();
+      break
+    case "1-3":
+      imgCounter++;
+      if(imgCounter >= imageList.length) {
+        imgCounter = 0;
+      }
+      imageSrc = imageList[imgCounter];
+      console.log('button 3, something happens!',imageSrc, imgCounter)
+      instance.setProperties("art-3", {"src":imageSrc});
       instance.render();
       break
   }
-}
-
-function changeImage(buttonID) {
-  let img;
-  let curImage = document.getElementById('image');
-  switch (buttonID) {
-    case "0":
-      img =  '{{&fsi.server}}/{{&fsi.context}}/server?type=image&source=images/samples/layers/gallery/boho-art-6654957_1920.jpg&width=940';
-      break
-    case "1":
-      img = '{{&fsi.server}}/{{&fsi.context}}/server?type=image&source=images/samples/layers/gallery/sign-post-5655110_1920.png&width=940';
-      break
-    case "2":
-      img = '{{&fsi.server}}/{{&fsi.context}}/server?type=image&source=images/samples/layers/gallery/abstract-art-7093399_1920.jpg&width=940';
-      break
-    case "3":
-      img = '{{&fsi.server}}/{{&fsi.context}}/server?type=image&source=images/samples/layers/gallery/cat-8185712_1920.jpg&width=940';
-      break
-    case "4":
-      img = '{{&fsi.server}}/{{&fsi.context}}/server?type=image&source=images/samples/layers/gallery/painting-6556384_1920.jpg&width=940';
-      break
-    case "5":
-      img = '{{&fsi.server}}/{{&fsi.context}}/server?type=image&source=images/samples/layers/gallery/abstract-rainbow-6296890_1920.jpg&width=940';
-      break
-    default:
-      img = '{{&fsi.server}}/{{&fsi.context}}/server?type=image&source=images/samples/layers/gallery/boho-art-6654957_1920.jpg&width=940';
-  }
-  curImage.src = img;
 }
