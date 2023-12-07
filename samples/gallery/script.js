@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const show = () => {
     console.log('show should happen now?')
-    //add glass layers
+    //add glass layers left and right
     instance.addLayer("container", {
       "name": "glass-left",
       "src": "images/samples/layers/gallery/glass-top.png",
@@ -38,12 +38,15 @@ document.addEventListener('DOMContentLoaded', () => {
       "id": "background",
       "src": "images/samples/layers/gallery/image-wall.png"
     });
+    //add glass layer center above frame since frame here is larger (passepartout)
     instance.addLayer("container", {
       "name": "glass-center",
       "src": "images/samples/layers/gallery/glass-top.png",
       "right":"37.8%","bottom":"47.9%","width":"38%", "height":"38%",
     });
   }
+
+  // create layers
   const instance =  $FSI.createNode("fsi-layers", {
     id: "myLayers",
     renderer: "png",
@@ -56,6 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
   })
   container.appendChild(instance);
 
+  // create inital root and group
   const layersRoot = $FSI.createNode("fsi-layers-root", {});
   instance.appendChild(layersRoot);
 
