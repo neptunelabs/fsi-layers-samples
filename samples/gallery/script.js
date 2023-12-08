@@ -16,8 +16,23 @@ const imageList = [
 ]
 
 document.addEventListener('DOMContentLoaded', () => {
- const container = document.getElementById('layersEle');
+  const container = document.getElementById('layersEle');
   if (container.firstChild) return; // viewers already setup
+
+  container.addEventListener('mouseover', () => {
+    document.querySelectorAll("button.btnLayers")
+      .forEach(el => {
+        el.classList.add("btn-show");
+      })
+  })
+  container.addEventListener('mouseleave', () => {
+    console.log('leave')
+    document.querySelectorAll("button.btnLayers")
+      .forEach(el => {
+        console.log(el)
+        el.classList.remove("btn-show");
+      })
+  })
 
   const show = () => {
     console.log('show should happen now?')
@@ -56,6 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
     debug: true,
     showInfo: false,
     onReady:show
+
   })
   container.appendChild(instance);
 
