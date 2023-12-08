@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
     instance.addLayer("container", {
       "name": "glass-left",
       "src": "images/samples/layers/gallery/glass-top-1.png",
-      "left":"22.276%","top":"16.785%","width":"11.95%"
+      "left":"22.276%","top":"16.785%","width":"11.75%"
     });
     //add glass layer center above frame since frame here is larger (passepartout)
     instance.addLayer("container", {
