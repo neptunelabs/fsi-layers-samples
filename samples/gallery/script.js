@@ -21,28 +21,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const show = () => {
     console.log('show should happen now?')
-    //add glass layers left and right
-    instance.addLayer("container", {
-      "name": "glass-left",
-      "src": "images/samples/layers/gallery/glass-top.png",
-      "left":"21.8%","bottom":"59.5%","width":"24%", "height":"24%"
-    });
-    instance.addLayer("container", {
-      "name": "glass-right",
-      "src": "images/samples/layers/gallery/glass-top.png",
-      "right":"18.4%","bottom":"60%","width":"24%", "height":"24%"
-    });
     // add background Layer in foreground
     instance.addLayer("container", {
       "name": "background",
       "id": "background",
       "src": "images/samples/layers/gallery/image-wall.png"
     });
+    //add glass layers left and right
+    instance.addLayer("container", {
+      "name": "glass-left",
+      "src": "images/samples/layers/gallery/glass-top-1.png",
+      "left":"22.276%","top":"16.785%","width":"11.95%"
+    });
     //add glass layer center above frame since frame here is larger (passepartout)
     instance.addLayer("container", {
       "name": "glass-center",
-      "src": "images/samples/layers/gallery/glass-top.png",
-      "right":"37.8%","bottom":"47.9%","width":"38%", "height":"38%",
+      "src": "images/samples/layers/gallery/glass-top-2.png",
+      "left":"41.92%","top":"13.95%","width":"20.31%"
+    });
+    instance.addLayer("container", {
+      "name": "glass-right",
+      "src": "images/samples/layers/gallery/glass-top-3.png",
+      "left":"69.375%","top":"16.25%","width":"11.84%"
     });
   }
 
