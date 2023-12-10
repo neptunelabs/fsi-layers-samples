@@ -93,12 +93,12 @@ document.addEventListener('DOMContentLoaded', () => {
   if (container.firstChild) return // viewers already setup
 
   container.addEventListener('mouseover', () => {
-    document.querySelectorAll('button.btn-shifer').forEach((el) => {
+    document.querySelectorAll('button.btn-shifter').forEach((el) => {
       el.classList.add('btn-show')
     })
   })
   container.addEventListener('mouseleave', () => {
-    document.querySelectorAll('button.btn-shifer').forEach((el) => {
+    document.querySelectorAll('button.btn-shifter').forEach((el) => {
       el.classList.remove('btn-show')
     })
   })
@@ -144,7 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ...pic.button,
           },
           'btn-' + index,
-          '<button class="btn text-white btn-shifer bg-success bg-gradient" onclick="changeArt(this, ' +
+          '<button class="btn text-white btn-shifter bg-success bg-gradient" onclick="changeArt(this, ' +
             index +
             ')"><i class="bi bi-chevron-down"></i></button>',
         )
@@ -156,7 +156,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 //change images on click
 const changeArt = (btn, buttonID) => {
-  btn.setAttribute('disabled', true)
+  btn.classList.add('d-none')
   let picture = pictures[buttonID]
   if (picture) {
     picture.number++
@@ -187,7 +187,7 @@ const changeArt = (btn, buttonID) => {
           this.mainFunc()
         }
         else {
-          btn.removeAttribute('disabled')
+          btn.classList.remove('d-none')
         }
       },
       update: function (timeStep) {
