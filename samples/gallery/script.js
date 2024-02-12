@@ -57,7 +57,7 @@ const pictures = [
       width: '20.31%',
     },
     button: {
-      right: '26%',
+      right: '27%',
       bottom: '18%',
       width: '23%',
       height: '23%',
