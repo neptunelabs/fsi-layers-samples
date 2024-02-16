@@ -12,12 +12,12 @@
   "license": "Apache-2.0",
   "private": true,
   "engines": {
-    "node": ">=16.0.0",
-    "npm": ">=6.0.0"
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
   },
   "devDependencies": {
-    "@neptunelabs/fsi-samples-framework": "^2.0.5-dev",
-    "prettier": "^3.0.1"
+    "@neptunelabs/fsi-samples-framework": "^2.0.6-dev",
+    "prettier": "^3"
   },
   "scripts": {
     "start": "workbench",
