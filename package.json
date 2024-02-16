@@ -16,11 +16,11 @@
     "npm": ">=6.0.0"
   },
   "devDependencies": {
-    "@neptunelabs/fsi-samples-framework": "^1.1.0",
+    "@neptunelabs/fsi-samples-framework": "^2.0.5-dev",
     "prettier": "^3.0.1"
   },
   "scripts": {
-    "start": "start-sample",
-    "build": "start-sample --build"
+    "start": "workbench",
+    "build": "workbench --build"
   }
 }

@@ -9,7 +9,7 @@ overview:
   order: 3
 sample:
   template:
-    schema: framework-2023
+    schema: bootstrap-taupe
     components:
       menu:
         template: data/furniture-menu.yml
@@ -22,9 +22,3 @@ sample:
         icons: true
       jquery:
         ui: true
-  mapping:
-    html: 'index.html'
-    js: 'script.js'
-    css: 'style.css'
-playground:
-  deploy: true
