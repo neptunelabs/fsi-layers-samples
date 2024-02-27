@@ -1,0 +1,18 @@
+overview:
+  title: React Test
+  image: logo.png
+  description: React
+  order: 2
+  facts:
+    - XXX
+sample:
+  template:
+    schema: react-taupe
+    components:
+      menu:
+        template: data/furniture-menu.yml
+      fsi:
+        layers: true
+      react: true
+      bootstrap:
+        icons: true
