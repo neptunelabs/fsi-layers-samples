@@ -7,24 +7,22 @@ overview:
     - No custom JS
     - Reference Sizing
   order: 2
+schema: bootstrap-taupe
 sample:
-  template:
-    schema: bootstrap-taupe
-    components:
-      menu:
-        template: data/clothing-menu.yml
-      featured:
-        template: data/clothing-featured.yml
-      highlight: DEAL OF THE DAY
-      footer:
-        credits:
-          photos:
-            - author: Artem Bondarchuk
-              link: https://unsplash.com/@artembondarchuk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
-              platform: Unsplash
-          viewer:
-            link: https://www.neptunelabs.com/fsi-viewer/
-      fsi:
-        layers: true
-      bootstrap:
-        icons: true
+  menu:
+    data: clothing-menu.yml
+  featured:
+    data: clothing-featured.yml
+  highlight: DEAL OF THE DAY
+  footer:
+    credits:
+      photos:
+        - author: Artem Bondarchuk
+          link: https://unsplash.com/@artembondarchuk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+          platform: Unsplash
+      viewer:
+        link: https://www.neptunelabs.com/fsi-viewer/
+  fsi:
+    layers: true
+  bootstrap:
+    icons: true

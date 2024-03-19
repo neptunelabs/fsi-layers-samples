@@ -7,18 +7,17 @@ overview:
     - Object colorization
     - Object visibility
   order: 3
+schema: bootstrap-taupe
 sample:
-  template:
-    schema: bootstrap-taupe
-    components:
-      menu:
-        template: data/furniture-menu.yml
-      footer:
-          viewer:
-            link: https://www.neptunelabs.com/fsi-layers/
-      fsi:
-        layers: true
-      bootstrap:
-        icons: true
-      jquery:
-        ui: true
+  menu:
+    data: Furniture-menu.yml
+  footer:
+    credits:
+      viewer:
+        link: https://www.neptunelabs.com/fsi-layers/
+  fsi:
+    layers: true
+  bootstrap:
+    icons: true
+  jquery:
+    ui: true

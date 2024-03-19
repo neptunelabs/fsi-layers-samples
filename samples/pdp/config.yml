@@ -7,16 +7,14 @@ overview:
     - Object visibility
     - 575 combinations
   order: 4
+schema: bootstrap-taupe
 sample:
-  template:
-    schema: bootstrap-taupe
-    components:
-      menu:
-        template: data/misc-menu.yml
-      footer:
-        viewer:
-          link: https://www.neptunelabs.com/fsi-layers/
-      fsi:
-        layers: true
-      bootstrap:
-        icons: true
+  menu:
+    data: misc-menu.yml
+  footer:
+    viewer:
+      link: https://www.neptunelabs.com/fsi-layers/
+  fsi:
+    layers: true
+  bootstrap:
+    icons: true

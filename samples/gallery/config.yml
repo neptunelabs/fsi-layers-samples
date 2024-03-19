@@ -6,23 +6,21 @@ overview:
     - Gallery configurator
     - With methods and callbacks
   order: 98
+schema: bootstrap-taupe
 sample:
-  template:
-    schema: bootstrap-taupe
-    components:
-      menu:
-        template: data/misc-menu.yml
-      highlight: CREATE YOUR OWN IMAGE GALLERY
-      footer:
-        credits:
-          photos:
-            author: various artists
-            link: https://pixabay.com/
-            platform: Pixabay
-          viewer:
-            link: https://www.neptunelabs.com/fsi-showcase/
-      fsi:
-        viewer: true
-        layers: true
-      bootstrap:
-        icons: true
+  menu:
+    data: misc-menu.yml
+  highlight: CREATE YOUR OWN IMAGE GALLERY
+  footer:
+    credits:
+      photos:
+        author: various artists
+        link: https://pixabay.com/
+        platform: Pixabay
+      viewer:
+        link: https://www.neptunelabs.com/fsi-showcase/
+  fsi:
+    viewer: true
+    layers: true
+  bootstrap:
+    icons: true
