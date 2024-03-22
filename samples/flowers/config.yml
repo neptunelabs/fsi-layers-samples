@@ -7,15 +7,7 @@ overview:
     - Object movement
     - Object rotation
   order: 1
+schema: bootstrap-taupe
 sample:
-  template:
-    schema: framework-2023
-    components:
-      fsi:
-        layers: true
-  mapping:
-    html: "index.html"
-    js: "script.js"
-    css: "style.css"
-playground:
-  deploy: true
+  fsi:
+    layers: true

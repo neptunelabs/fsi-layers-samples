@@ -12,7 +12,7 @@ FSI Layers can be created and controlled as a simple HTML tag and/or via JavaScr
 
 This repository contains examples on how to use and build your own applications.
 
-![Project Image](project.gif)
+[![Project Image](project.gif)][GHPages]
 
 ## Getting Started
 

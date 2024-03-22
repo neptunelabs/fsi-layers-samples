@@ -1,6 +1,7 @@
 ---
 title: 'FSI Layers'
-projectURL: https://www.neptunelabs.com/fsi-layers/
+projectURL: https://www.neptunelabs.com/
 originAssetPath: layers
+schema: overview-taupe
 playground:
   stackblitz: fsi-layers-samples

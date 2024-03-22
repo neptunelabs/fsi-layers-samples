@@ -1,0 +1,26 @@
+overview:
+  title: Image Gallery
+  image: logo.png
+  description: Learn how to use methods and callbacks with a simple image gallery demo.
+  facts:
+    - Gallery configurator
+    - With methods and callbacks
+  order: 98
+schema: bootstrap-taupe
+sample:
+  menu:
+    data: misc-menu.yml
+  highlight: CREATE YOUR OWN IMAGE GALLERY
+  footer:
+    credits:
+      photos:
+        author: various artists
+        link: https://pixabay.com/
+        platform: Pixabay
+      viewer:
+        link: https://www.neptunelabs.com/fsi-showcase/
+  fsi:
+    viewer: true
+    layers: true
+  bootstrap:
+    icons: true
